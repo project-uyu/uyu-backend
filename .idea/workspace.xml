@@ -82,6 +82,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "spring.configuration.checksum": "f388e2a0991e057a0316947c380806f0"
   },
   "keyToStringList": {
@@ -119,7 +120,7 @@
       <workItem from="1674634949168" duration="29000" />
       <workItem from="1674634991626" duration="74000" />
       <workItem from="1674635105319" duration="30000" />
-      <workItem from="1675400000846" duration="727000" />
+      <workItem from="1675400000846" duration="1078000" />
     </task>
     <task id="LOCAL-00001" summary="[feat] 폴더 구조 생성">
       <created>1675400009045</created>
@@ -128,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675400009045</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[feat] 엔티티 생성">
+      <created>1675401011840</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675401011840</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +155,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[feat] 폴더 구조 생성" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] 폴더 구조 생성" />
+    <MESSAGE value="[feat] 엔티티 생성" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] 엔티티 생성" />
   </component>
 </project>
