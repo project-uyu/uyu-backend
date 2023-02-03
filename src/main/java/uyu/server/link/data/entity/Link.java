@@ -1,4 +1,30 @@
 package uyu.server.link.data.entity;
 
-public class Link {
+import jakarta.persistence.*;
+import lombok.*;
+import uyu.server.util.BaseTimeEntity;
+
+import java.time.LocalDate;
+
+@Getter
+@NoArgsConstructor
+@Entity
+@Table(name = "link")
+public class Link extends BaseTimeEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "link_id")
+    private Long id;
+    private String url;
+    private String content;
+    private Long hit;
+    private boolean isDeleted;
+    private LocalDate deletedDate;
+    @Builder // 빌더 형태로 만들어줌
+    public Link(String url, String content) {
+        this.url = url;
+        this.content = content;
+        this.hit = 0L;
+        this.isDeleted = false;
+    }
 }
