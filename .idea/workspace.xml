@@ -153,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675401011840</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[feat] Spring RestDocs 설정">
+      <created>1675848517059</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675848517059</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +180,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[feat] 폴더 구조 생성" />
     <MESSAGE value="[feat] 엔티티 생성" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] 엔티티 생성" />
+    <MESSAGE value="[feat] Spring RestDocs 설정" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] Spring RestDocs 설정" />
   </component>
 </project>
