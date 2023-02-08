@@ -168,7 +168,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675849159657</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[feat] Service 인터페이스 함수 생성&#10;- validation dependency추가">
+      <created>1675849602827</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675849602827</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[fix] TagService의 createTag 함수 인자 추가">
+      <created>1675849799052</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675849799052</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +204,8 @@
     <MESSAGE value="[feat] 엔티티 생성" />
     <MESSAGE value="[feat] Spring RestDocs 설정" />
     <MESSAGE value="[feat] Controller 기본틀 설정" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] Controller 기본틀 설정" />
+    <MESSAGE value="[feat] Service 인터페이스 함수 생성&#10;- validation dependency추가" />
+    <MESSAGE value="[fix] TagService의 createTag 함수 인자 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix] TagService의 createTag 함수 인자 추가" />
   </component>
 </project>

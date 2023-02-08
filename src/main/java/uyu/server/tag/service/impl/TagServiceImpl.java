@@ -2,30 +2,42 @@ package uyu.server.tag.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import uyu.server.tag.data.entity.Tag;
+import uyu.server.tag.data.repository.TagRepository;
 import uyu.server.tag.service.TagService;
 import uyu.server.tag.web.dto.TagListResponseDto;
 
 import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @RequiredArgsConstructor
 public class TagServiceImpl implements TagService {
+    private final TagRepository tagRepository;
     @Override
     public Long createTag(String name) {
-        return null;
+        return tagRepository.save(Tag.builder()
+                        .name(name)
+                        .build()).getId();
     }
 
     @Override
     public List<TagListResponseDto> getTagList() {
-        return null;
+        return tagRepository.findAll()
+                .stream()
+                .map(tag -> new TagListResponseDto(tag)).collect(Collectors.toList());
     }
 
     @Override
     public Long deleteTag(Long id) {
-        return null;
+        tagRepository.delete(tagRepository.findById(id).orElseThrow(()-> new IllegalArgumentException("해당 id를 가진 tag가 없습니다!" + id)));
+        return id;
     }
 
     @Override
     public Long modifyTag(Long id, String name) {
-        return null;
+        Tag tag = tagRepository.findById(id).orElseThrow(()-> new IllegalArgumentException("해당 id를 가진 tag가 없습니다!" + id));
+        tag.setName(name);
+        return tag.getId();
     }
 }
