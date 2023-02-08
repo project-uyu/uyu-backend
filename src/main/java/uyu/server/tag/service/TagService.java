@@ -5,7 +5,7 @@ import uyu.server.tag.web.dto.TagListResponseDto;
 import java.util.List;
 
 public interface TagService {
-    Long createTag();
+    Long createTag(String name);
     List<TagListResponseDto> getTagList();
     Long deleteTag(Long id);
     Long modifyTag(Long id, String name);

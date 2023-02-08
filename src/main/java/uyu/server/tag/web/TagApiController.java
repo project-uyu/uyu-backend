@@ -17,7 +17,7 @@ public class TagApiController {
     private final TagService tagService;
     @PostMapping("new")
     public ResponseEntity<Long> createTag(@RequestParam(value = "name") String name) {
-        Long newTag = tagService.createTag();
+        Long newTag = tagService.createTag(name);
         return ResponseEntity.status(HttpStatus.CREATED).body(newTag);
     }
 
