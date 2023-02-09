@@ -7,19 +7,28 @@ import uyu.server.link.data.repository.LinkRepository;
 import uyu.server.link.service.LinkService;
 import uyu.server.link.web.dto.LinkRequestDto;
 import uyu.server.link.web.dto.LinkResponseDto;
+import uyu.server.linkTag.data.repository.LinkTagRepository;
+import uyu.server.tag.web.dto.TagListResponseDto;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 public class LinkServiceImpl implements LinkService {
     private final LinkRepository linkRepository;
+    private final LinkTagRepository linkTagRepository;
     @Override
     public LinkResponseDto getLinkDetail(Long linkId) {
         Link link = linkRepository.findById(linkId).orElseThrow(()-> new IllegalArgumentException("해당 아이디를 가진 링크가 존재하지 않습니다."+linkId));
-
+        List<TagListResponseDto> tagLists = linkTagRepository.findByIdUsingFetchJoinTag(linkId)
+                .stream().map(tag -> new TagListResponseDto(tag)).collect(Collectors.toList());
         return LinkResponseDto.builder()
                 .content(link.getContent())
                 .createdDate(link.getCreatedDate())
-                .hit(link.)
+                .hit(link.getHit())
+                .modifiedDate(link.getModifiedDate())
+                .tagLists(tagLists)
                 .build();
     }
 
