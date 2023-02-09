@@ -63,7 +63,7 @@ public class LinkServiceImpl implements LinkService {
         // 남은 애들 삭제
         Iterator<Long> setIt = tags.iterator();
         while(setIt.hasNext()) {
-            linkTagRepository.delete(linkTagRepository.findLinkTagByTagId(newLink.getId(), setIt.next()));
+            linkTagRepository.delete(linkTagRepository.findLinkTagByLinkIdAndTagId(newLink.getId(), setIt.next()));
         }
         return newLink.getId();
     }
@@ -71,6 +71,15 @@ public class LinkServiceImpl implements LinkService {
     @Override
     @Transactional
     public Long deleteLink(Long linkId) {
-        return null;
+        // 링크태그 지우기
+        List<LinkTag> linkTags = linkTagRepository.findLinkTagsByLinkId(linkId);
+        Iterator<LinkTag> it = linkTags.iterator();
+        while(it.hasNext()) {
+            linkTagRepository.delete(it.next());
+        }
+
+        //링크 지우기
+        linkRepository.delete(linkRepository.findById(linkId).orElseThrow(()-> new IllegalArgumentException("해당 아이디를 가진 링크가 존재하지 않습니다."+linkId)));
+        return linkId;
     }
 }

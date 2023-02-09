@@ -15,5 +15,9 @@ public interface LinkTagRepository extends JpaRepository<LinkTag,Long> {
     List<Long> findTagIdsByLinkId(Long linkId);
 
     @Query("select lt from LinkTag lt where lt.tag.id = :tagId and lt.link.id = :linkId")
-    LinkTag findLinkTagByTagId(Long linkId, Long tagId);
+    LinkTag findLinkTagByLinkIdAndTagId(Long linkId, Long tagId);
+
+    @Query("select lt from LinkTag lt where lt.link.id = :linkId")
+    List<LinkTag> findLinkTagsByLinkId(Long linkId);
+
 }

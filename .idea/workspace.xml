@@ -140,7 +140,7 @@
       <workItem from="1674635105319" duration="30000" />
       <workItem from="1675400000846" duration="1078000" />
       <workItem from="1675913997453" duration="147000" />
-      <workItem from="1675914150768" duration="400000" />
+      <workItem from="1675914150768" duration="1481000" />
     </task>
     <task id="LOCAL-00001" summary="[feat] 폴더 구조 생성">
       <created>1675400009045</created>
@@ -205,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675914132618</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="[feat] 링크 수정 서비스 완료&#10;- 기존에 존재하던 태그와 비교&#10;  - 새롭게 생성한 태그면 생성&#10;  - 기존 태그가 사라졌을 시 삭제">
+      <created>1675915472140</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1675915472140</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +251,7 @@
     <MESSAGE value="[feat] LinkController + LinkService 틀 구축 완료" />
     <MESSAGE value="[feat] 링크 상세조회 서비스 완료" />
     <MESSAGE value="[feat] transactional 설정&#10;- read_only 기본&#10;- 데이터 변경 서비스에만 @transactional 추가로 붙임" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] transactional 설정&#10;- read_only 기본&#10;- 데이터 변경 서비스에만 @transactional 추가로 붙임" />
+    <MESSAGE value="[feat] 링크 수정 서비스 완료&#10;- 기존에 존재하던 태그와 비교&#10;  - 새롭게 생성한 태그면 생성&#10;  - 기존 태그가 사라졌을 시 삭제" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] 링크 수정 서비스 완료&#10;- 기존에 존재하던 태그와 비교&#10;  - 새롭게 생성한 태그면 생성&#10;  - 기존 태그가 사라졌을 시 삭제" />
   </component>
 </project>
