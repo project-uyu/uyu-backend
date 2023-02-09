@@ -139,6 +139,8 @@
       <workItem from="1674634991626" duration="74000" />
       <workItem from="1674635105319" duration="30000" />
       <workItem from="1675400000846" duration="1078000" />
+      <workItem from="1675913997453" duration="147000" />
+      <workItem from="1675914150768" duration="400000" />
     </task>
     <task id="LOCAL-00001" summary="[feat] 폴더 구조 생성">
       <created>1675400009045</created>
@@ -189,7 +191,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675910923999</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[feat] 링크 상세조회 서비스 완료">
+      <created>1675913957435</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675913957435</updated>
+    </task>
+    <task id="LOCAL-00009" summary="[feat] transactional 설정&#10;- read_only 기본&#10;- 데이터 변경 서비스에만 @transactional 추가로 붙임">
+      <created>1675914132618</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1675914132618</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +242,8 @@
     <MESSAGE value="[feat] Service 인터페이스 함수 생성&#10;- validation dependency추가" />
     <MESSAGE value="[fix] TagService의 createTag 함수 인자 추가" />
     <MESSAGE value="[feat] LinkController + LinkService 틀 구축 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] LinkController + LinkService 틀 구축 완료" />
+    <MESSAGE value="[feat] 링크 상세조회 서비스 완료" />
+    <MESSAGE value="[feat] transactional 설정&#10;- read_only 기본&#10;- 데이터 변경 서비스에만 @transactional 추가로 붙임" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] transactional 설정&#10;- read_only 기본&#10;- 데이터 변경 서비스에만 @transactional 추가로 붙임" />
   </component>
 </project>

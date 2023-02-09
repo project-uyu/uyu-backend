@@ -1,6 +1,7 @@
 package uyu.server.linkTag.data.entity;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import uyu.server.link.data.entity.Link;
@@ -22,4 +23,10 @@ public class LinkTag {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tag_id")
     private Tag tag;
+
+    @Builder
+    public LinkTag(Link link, Tag tag) {
+        this.link = link;
+        this.tag = tag;
+    }
 }
