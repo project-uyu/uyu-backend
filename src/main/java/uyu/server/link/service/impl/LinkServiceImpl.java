@@ -2,6 +2,7 @@ package uyu.server.link.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import uyu.server.link.data.entity.Link;
 import uyu.server.link.data.repository.LinkRepository;
 import uyu.server.link.service.LinkService;
@@ -15,6 +16,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class LinkServiceImpl implements LinkService {
     private final LinkRepository linkRepository;
     private final LinkTagRepository linkTagRepository;
@@ -33,11 +35,14 @@ public class LinkServiceImpl implements LinkService {
     }
 
     @Override
+    @Transactional
     public Long modifyLink(Long linkId, LinkRequestDto requestDto) {
+        Link link = linkRepository.findById(linkId).orElseThrow(()-> new IllegalArgumentException("해당 아이디를 가진 링크가 존재하지 않습니다."+linkId));
         return null;
     }
 
     @Override
+    @Transactional
     public Long deleteLink(Long linkId) {
         return null;
     }
