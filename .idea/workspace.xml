@@ -5,16 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bf5b5bb-f435-4a01-a1e1-f4b491ca7f86" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/uyu/server/link/data/entity/Link.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uyu/server/link/data/repository/LinkRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uyu/server/link/service/LinkService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uyu/server/link/service/impl/LinkServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uyu/server/link/web/LinkApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uyu/server/tag/data/entity/Tag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uyu/server/tag/data/repository/TagRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uyu/server/tag/service/TagService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uyu/server/tag/service/impl/TagServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/uyu/server/tag/web/TagApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
