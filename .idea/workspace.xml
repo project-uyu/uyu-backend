@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bf5b5bb-f435-4a01-a1e1-f4b491ca7f86" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+    <list default="true" id="2bf5b5bb-f435-4a01-a1e1-f4b491ca7f86" name="Changes" comment="[feat] 엔티티 생성">
+      <change afterPath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/ModifyFolderDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/dto/CreateFolderDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/folder/service/FolderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/folder/service/FolderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/FolderApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/FolderApiController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +62,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -85,6 +88,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_directory_selection": "/Users/jeong-yewon/projects/side-project/uyu-backend/src/main/java/uyu/server/folder/web",
     "last_opened_file_path": "/Users/jeong-yewon/projects/side/uyu-backend/build.gradle",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -101,6 +105,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="uyu.server.folder.web" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="server.main" />
