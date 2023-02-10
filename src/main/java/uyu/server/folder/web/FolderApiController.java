@@ -7,8 +7,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import uyu.server.folder.service.FolderService;
 import uyu.server.folder.web.dto.CreateFolderDTO;
-import uyu.server.folder.web.dto.FolderListDTO;
+import uyu.server.folder.web.dto.FolderDTO;
 import uyu.server.folder.web.dto.ModifyFolderDTO;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/folders/")
@@ -19,9 +21,9 @@ public class FolderApiController {
     private final FolderService folderService;
 
     @GetMapping()
-    public ResponseEntity<FolderListDTO> getFolderList(@RequestBody CreateFolderDTO createFolderDTO) {
+    public ResponseEntity<List<FolderDTO>> getFolderList(@RequestBody CreateFolderDTO createFolderDTO) {
         Long userId = null;
-        FolderListDTO folderList = folderService.getFolderList(userId);
+        List<FolderDTO> folderList = folderService.getFolderList(userId);
         return ResponseEntity.status(HttpStatus.CREATED).body(folderList);
     }
 

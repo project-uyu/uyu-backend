@@ -1,6 +1,8 @@
 package uyu.server.folder.service;
 
-import uyu.server.folder.web.dto.FolderListDTO;
+import uyu.server.folder.web.dto.FolderDTO;
+
+import java.util.List;
 
 public interface FolderService {
     Long createNewFolder(String name);
@@ -11,5 +13,5 @@ public interface FolderService {
 
     Long modifyFolder();
 
-    FolderListDTO getFolderList(Long userId);
+    List<FolderDTO> getFolderList(Long userId);
 }
