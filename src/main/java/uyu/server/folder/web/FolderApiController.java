@@ -29,7 +29,7 @@ public class FolderApiController {
 
     @PostMapping("new")
     public ResponseEntity<Long> createFolder(@RequestBody CreateFolderRequestDTO createFolderDTO) {
-        Long newFolderId = folderService.createNewFolder("name");
+        Long newFolderId = folderService.createNewFolder(createFolderDTO.getTitle(),createFolderDTO.getParentFolderId());
         return ResponseEntity.status(HttpStatus.CREATED).body(newFolderId);
     }
 

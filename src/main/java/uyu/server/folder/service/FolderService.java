@@ -5,7 +5,7 @@ import uyu.server.folder.web.dto.FolderDTO;
 import java.util.List;
 
 public interface FolderService {
-    Long createNewFolder(String name);
+    Long createNewFolder(String title, Long parentFolderId);
 
     Long deleteFolder(Long folderId);
 

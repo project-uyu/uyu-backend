@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bf5b5bb-f435-4a01-a1e1-f4b491ca7f86" name="Changes" comment="[feat] 엔티티 생성">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/dto/CreateFolderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/dto/CreateFolderDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/dto/FolderListDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/dto/FolderListDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/FolderApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/FolderApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/dto/CreateFolderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/dto/request/CreateFolderRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/dto/ModifyFolderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/dto/request/ModifyFolderRequestDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
