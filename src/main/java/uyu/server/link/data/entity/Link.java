@@ -2,6 +2,7 @@ package uyu.server.link.data.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import uyu.server.link.web.dto.LinkRequestDto;
 import uyu.server.util.BaseTimeEntity;
 
 import java.time.LocalDate;
@@ -26,5 +27,11 @@ public class Link extends BaseTimeEntity {
         this.content = content;
         this.hit = 0L;
         this.isDeleted = false;
+    }
+
+    public Link update(LinkRequestDto linkDto) {
+        this.content = linkDto.getContent();
+        this.url = linkDto.getUrl();
+        return this;
     }
 }
