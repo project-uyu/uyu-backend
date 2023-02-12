@@ -17,6 +17,7 @@ import java.util.Optional;
 public class FolderServiceImpl implements FolderService {
 
     private final FolderRepository folderRepository;
+
     @Override
     public Long createNewFolder(String title, Long folderId) {
         return folderRepository.save(Folder.builder()
