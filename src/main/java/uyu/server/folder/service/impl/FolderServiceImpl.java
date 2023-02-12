@@ -3,6 +3,7 @@ package uyu.server.folder.service.impl;
 import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import uyu.server.folder.data.entity.Folder;
 import uyu.server.folder.data.repository.FolderRepository;
 import uyu.server.folder.service.FolderService;
@@ -38,13 +39,16 @@ public class FolderServiceImpl implements FolderService {
         return null;
     }
 
+    @Transactional
     @Override
     public Long modifyFolder(Long folderId, String title, Long parentFolderId) {
         Folder folder = folderRepository.findById(folderId).orElseThrow(()-> new IllegalArgumentException("해당 id를 가진 폴더가 없습니다" + folderId));
 
+        System.out.println(folderId+" "+ folder);
         folder.update(title, parentFolderId == null ? null :
                 folderRepository.findById(parentFolderId)
                         .orElseThrow(()-> new IllegalArgumentException("해당 id를 가진 부모 폴더가 없습니다" + parentFolderId)));
+
 
         return folder.getId();
     }
