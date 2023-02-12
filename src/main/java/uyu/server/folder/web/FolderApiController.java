@@ -46,9 +46,10 @@ public class FolderApiController {
     }
 
     @PatchMapping("{folderId}")
-    public ResponseEntity<Long> modifyFolder(@PathVariable @NotNull(message="필수값입니다.")
+    public ResponseEntity<Long> modifyFolder(@PathVariable @NotNull(message="필수값입니다.") Long folderId,
                                                  @RequestBody ModifyFolderRequestDTO modifyFolderDTO) {
-        Long modifyFolderId = folderService.modifyFolder();
+
+        Long modifyFolderId = folderService.modifyFolder(folderId, modifyFolderDTO.getTitle(), modifyFolderDTO.getParentFolderId());
         return ResponseEntity.status(HttpStatus.CREATED).body(modifyFolderId);
     }
 

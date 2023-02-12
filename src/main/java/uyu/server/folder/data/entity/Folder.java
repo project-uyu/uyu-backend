@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.springframework.data.domain.PageRequest;
 
 @Getter
 @NoArgsConstructor
@@ -22,5 +24,15 @@ public class Folder {
     public Folder(String title, Folder parentFolder) {
         this.title = title;
         this.parentFolder = parentFolder;
+    }
+
+    public void update(String title, Folder parentFolder){
+        if(title != null) {
+            this.title = title;
+        }
+
+        if(parentFolder != null){
+            this.parentFolder = parentFolder;
+        }
     }
 }

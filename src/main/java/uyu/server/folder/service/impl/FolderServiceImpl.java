@@ -1,5 +1,6 @@
 package uyu.server.folder.service.impl;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import uyu.server.folder.data.entity.Folder;
@@ -17,8 +18,13 @@ public class FolderServiceImpl implements FolderService {
     private final FolderRepository folderRepository;
     @Override
     public Long createNewFolder(String title, Long folderId) {
-        Optional<Folder> folder = folderRepository.findById(folderId);
-        return folderRepository.save(Folder.builder().title(title).parentFolder(folder.get()).build()).getId();
+        return folderRepository.save(Folder.builder()
+                .title(title)
+                .parentFolder(folderId == null ? null :
+                        folderRepository.findById(folderId)
+                                .orElseThrow(()-> new IllegalArgumentException("해당 id를 가진 폴더가 없습니다" + folderId)))
+                .build())
+                .getId();
     }
 
     @Override
@@ -33,8 +39,14 @@ public class FolderServiceImpl implements FolderService {
     }
 
     @Override
-    public Long modifyFolder() {
-        return null;
+    public Long modifyFolder(Long folderId, String title, Long parentFolderId) {
+        Folder folder = folderRepository.findById(folderId).orElseThrow(()-> new IllegalArgumentException("해당 id를 가진 폴더가 없습니다" + folderId));
+
+        folder.update(title, parentFolderId == null ? null :
+                folderRepository.findById(parentFolderId)
+                        .orElseThrow(()-> new IllegalArgumentException("해당 id를 가진 부모 폴더가 없습니다" + parentFolderId)));
+
+        return folder.getId();
     }
 
     @Override
