@@ -1,3 +1,21 @@
 
 _
 /src/main/java/uyu/server/ServerApplication.java,3/d/3d37bbdec635fc6948e9dc42b88d0c16d739485c
+f
+6src/main/java/uyu/server/link/service/LinkService.java,b/7/b733f10723941b92803318474021928ab5a360c2
+i
+9src/main/java/uyu/server/linkTag/data/entity/LinkTag.java,6/f/6ffe5215e26a49c08cc1b10a37c87a8383425103
+o
+?src/main/java/uyu/server/link/service/impl/LinkServiceImpl.java,a/a/aa07c02809c6d25bae39784c8a0b8cc7337ffeef
+d
+4src/test/java/uyu/server/ServerApplicationTests.java,2/f/2f8f4fb1d282d817b4db6161c4f3125887de5ef2
+h
+8src/main/java/uyu/server/link/web/LinkApiController.java,4/0/40e56be748b4b752e9e7d5774772ba3bece9806c
+a
+1src/main/java/uyu/server/util/BaseTimeEntity.java,8/9/892fa61bf598b9ba79c503de60a215027ce8cdb6
+f
+6src/main/java/uyu/server/folder/web/dto/FolderDTO.java,9/b/9bdc0173dd11bbad821b22a85ed3255d8df7c9e8
+{
+Ksrc/main/java/uyu/server/folder/web/dto/request/CreateFolderRequestDTO.java,4/2/42e7667bbbf8c31f2d3d9389a82765fcfe704dc4
+{
+Ksrc/main/java/uyu/server/folder/web/dto/request/ModifyFolderRequestDTO.java,7/e/7e9333c47303cfc4f5413c7a925fed05d7a2c5c6

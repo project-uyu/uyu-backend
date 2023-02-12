@@ -6,7 +6,6 @@ import uyu.server.folder.data.entity.Folder;
 import uyu.server.folder.data.repository.FolderRepository;
 import uyu.server.folder.service.FolderService;
 import uyu.server.folder.web.dto.FolderDTO;
-import uyu.server.tag.data.entity.Tag;
 
 import java.util.List;
 import java.util.Optional;
@@ -24,7 +23,8 @@ public class FolderServiceImpl implements FolderService {
 
     @Override
     public Long deleteFolder(Long folderId) {
-        return null;
+        folderRepository.delete(folderRepository.findById(folderId).orElseThrow(()-> new IllegalArgumentException("해당 id를 가진 폴더가 없습니다" + folderId)));
+        return folderId;
     }
 
     @Override
