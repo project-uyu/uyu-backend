@@ -3,7 +3,7 @@ package uyu.server.linkTag.data.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import uyu.server.linkTag.data.entity.LinkTag;
-import uyu.server.tag.data.entity.Tag;
+import uyu.server.tag.repository.entity.Tag;
 
 import java.util.List;
 

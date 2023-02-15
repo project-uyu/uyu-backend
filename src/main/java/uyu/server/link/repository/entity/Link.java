@@ -1,4 +1,4 @@
-package uyu.server.link.data.entity;
+package uyu.server.link.repository.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
