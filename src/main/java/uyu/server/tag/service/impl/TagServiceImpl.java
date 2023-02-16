@@ -3,8 +3,8 @@ package uyu.server.tag.service.impl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import uyu.server.tag.data.entity.Tag;
-import uyu.server.tag.data.repository.TagRepository;
+import uyu.server.tag.repository.entity.Tag;
+import uyu.server.tag.repository.repository.TagRepository;
 import uyu.server.tag.service.TagService;
 import uyu.server.tag.web.dto.TagListResponseDto;
 
