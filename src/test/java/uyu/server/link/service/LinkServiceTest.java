@@ -16,16 +16,14 @@ import uyu.server.link.web.dto.LinkRequestDto;
 import uyu.server.link.web.dto.LinkResponseDto;
 import uyu.server.linkTag.data.entity.LinkTag;
 import uyu.server.linkTag.data.repository.LinkTagRepository;
-import uyu.server.tag.repository.entity.Tag;
+import uyu.server.tag.data.entity.Tag;
 import uyu.server.tag.web.dto.TagListResponseDto;
 
-import java.time.LocalDate;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.BDDMockito.willDoNothing;
 
 @ExtendWith(SpringExtension.class)
 public class LinkServiceTest {

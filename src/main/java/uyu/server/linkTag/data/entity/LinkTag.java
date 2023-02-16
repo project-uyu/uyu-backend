@@ -5,7 +5,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import uyu.server.link.data.entity.Link;
-import uyu.server.tag.repository.entity.Tag;
+import uyu.server.tag.data.entity.Tag;
+
 @Getter
 @NoArgsConstructor
 @Entity

@@ -3,7 +3,7 @@ package uyu.server.tag.web.dto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
-import uyu.server.tag.repository.entity.Tag;
+import uyu.server.tag.data.entity.Tag;
 
 @Getter
 @AllArgsConstructor

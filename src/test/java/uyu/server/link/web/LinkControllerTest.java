@@ -9,11 +9,9 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import uyu.server.folder.data.entity.Folder;
 import uyu.server.link.service.LinkService;
 import uyu.server.link.web.dto.LinkRequestDto;
 import uyu.server.link.web.dto.LinkResponseDto;
-import uyu.server.tag.repository.entity.Tag;
 import uyu.server.tag.web.dto.TagListResponseDto;
 
 import java.time.LocalDate;
