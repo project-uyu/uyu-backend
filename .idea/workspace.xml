@@ -118,7 +118,30 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LinkControllerTest.modifyLinkDetail">
+  <component name="RunManager" selected="Gradle.LinkControllerTest.deleteLink">
+    <configuration name="LinkControllerTest.deleteLink" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;uyu.server.link.web.LinkControllerTest.deleteLink&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="LinkControllerTest.getLinkDetail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -181,6 +204,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.LinkControllerTest.deleteLink" />
         <item itemvalue="Gradle.LinkControllerTest.modifyLinkDetail" />
         <item itemvalue="Gradle.LinkControllerTest.getLinkDetail" />
       </list>
@@ -201,6 +225,7 @@
       <workItem from="1675400000846" duration="1078000" />
       <workItem from="1676193656751" duration="18000" />
       <workItem from="1676193679841" duration="7649000" />
+      <workItem from="1676511880913" duration="355000" />
     </task>
     <task id="LOCAL-00001" summary="[feat] 폴더 구조 생성">
       <created>1675400009045</created>
@@ -279,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676473609789</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="[feat] 컨트롤러 테스트 완료">
+      <created>1676511863478</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676511863478</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,6 +352,7 @@
     <MESSAGE value="[feat] transactional 설정&#10;- read_only 기본&#10;- 데이터 변경 서비스에만 @transactional 추가로 붙임" />
     <MESSAGE value="[feat] 링크 수정 서비스 완료&#10;- 기존에 존재하던 태그와 비교&#10;  - 새롭게 생성한 태그면 생성&#10;  - 기존 태그가 사라졌을 시 삭제" />
     <MESSAGE value="[feat] 테스트 틀 구축" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] 테스트 틀 구축" />
+    <MESSAGE value="[feat] 컨트롤러 테스트 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] 컨트롤러 테스트 완료" />
   </component>
 </project>
