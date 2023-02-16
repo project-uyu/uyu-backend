@@ -2,6 +2,7 @@ package uyu.server.link.data.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import uyu.server.folder.data.entity.Folder;
 import uyu.server.link.web.dto.LinkRequestDto;
 import uyu.server.util.BaseTimeEntity;
 
@@ -21,11 +22,16 @@ public class Link extends BaseTimeEntity {
     private Long hit;
     private boolean isDeleted;
     private LocalDate deletedDate;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "folder_id")
+    private Folder folder;
+
     @Builder // 빌더 형태로 만들어줌
-    public Link(String url, String content) {
+    public Link(String url, String content,Folder folder) {
         this.url = url;
         this.content = content;
         this.hit = 0L;
+        this.folder = folder;
         this.isDeleted = false;
     }
 

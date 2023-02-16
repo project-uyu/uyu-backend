@@ -1,161 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="uyu">
-  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.39">
-    <root id="1">
-      <DefaultCasing>mixed/mixed</DefaultCasing>
-      <DefaultEngine>InnoDB</DefaultEngine>
-      <Grants>|root||jeong-yewon|localhost|ALTER|G
-|root||root|localhost|ALTER|G
-|root||jeong-yewon|localhost|ALTER ROUTINE|G
-|root||root|localhost|ALTER ROUTINE|G
-|root||jeong-yewon|localhost|BINLOG ADMIN|G
-|root||root|localhost|BINLOG ADMIN|G
-|root||jeong-yewon|localhost|BINLOG MONITOR|G
-|root||root|localhost|BINLOG MONITOR|G
-|root||jeong-yewon|localhost|BINLOG REPLAY|G
-|root||root|localhost|BINLOG REPLAY|G
-|root||jeong-yewon|localhost|CONNECTION ADMIN|G
-|root||root|localhost|CONNECTION ADMIN|G
-|root||jeong-yewon|localhost|CREATE|G
-|root||root|localhost|CREATE|G
-|root||jeong-yewon|localhost|CREATE ROUTINE|G
-|root||root|localhost|CREATE ROUTINE|G
-|root||jeong-yewon|localhost|CREATE TABLESPACE|G
-|root||root|localhost|CREATE TABLESPACE|G
-|root||jeong-yewon|localhost|CREATE TEMPORARY TABLES|G
-|root||root|localhost|CREATE TEMPORARY TABLES|G
-|root||jeong-yewon|localhost|CREATE USER|G
-|root||root|localhost|CREATE USER|G
-|root||jeong-yewon|localhost|CREATE VIEW|G
-|root||root|localhost|CREATE VIEW|G
-|root||jeong-yewon|localhost|DELETE|G
-|root||root|localhost|DELETE|G
-|root||jeong-yewon|localhost|DELETE HISTORY|G
-|root||root|localhost|DELETE HISTORY|G
-|root||jeong-yewon|localhost|DROP|G
-|root||root|localhost|DROP|G
-|root||jeong-yewon|localhost|EVENT|G
-|root||root|localhost|EVENT|G
-|root||jeong-yewon|localhost|EXECUTE|G
-|root||root|localhost|EXECUTE|G
-|root||jeong-yewon|localhost|FEDERATED ADMIN|G
-|root||root|localhost|FEDERATED ADMIN|G
-|root||jeong-yewon|localhost|FILE|G
-|root||root|localhost|FILE|G
-|root||jeong-yewon|localhost|INDEX|G
-|root||root|localhost|INDEX|G
-|root||jeong-yewon|localhost|INSERT|G
-|root||root|localhost|INSERT|G
-|root||jeong-yewon|localhost|LOCK TABLES|G
-|root||root|localhost|LOCK TABLES|G
-|root||jeong-yewon|localhost|PROCESS|G
-|root||root|localhost|PROCESS|G
-|root||jeong-yewon|localhost|READ_ONLY ADMIN|G
-|root||root|localhost|READ_ONLY ADMIN|G
-|root||jeong-yewon|localhost|REFERENCES|G
-|root||root|localhost|REFERENCES|G
-|root||jeong-yewon|localhost|RELOAD|G
-|root||root|localhost|RELOAD|G
-|root||jeong-yewon|localhost|REPLICATION MASTER ADMIN|G
-|root||root|localhost|REPLICATION MASTER ADMIN|G
-|root||jeong-yewon|localhost|REPLICATION SLAVE|G
-|root||root|localhost|REPLICATION SLAVE|G
-|root||jeong-yewon|localhost|REPLICATION SLAVE ADMIN|G
-|root||root|localhost|REPLICATION SLAVE ADMIN|G
-|root||jeong-yewon|localhost|SELECT|G
-|root||root|localhost|SELECT|G
-|root||jeong-yewon|localhost|SET USER|G
-|root||root|localhost|SET USER|G
-|root||jeong-yewon|localhost|SHOW DATABASES|G
-|root||root|localhost|SHOW DATABASES|G
-|root||jeong-yewon|localhost|SHOW VIEW|G
-|root||root|localhost|SHOW VIEW|G
-|root||jeong-yewon|localhost|SHUTDOWN|G
-|root||root|localhost|SHUTDOWN|G
-|root||jeong-yewon|localhost|SLAVE MONITOR|G
-|root||root|localhost|SLAVE MONITOR|G
-|root||jeong-yewon|localhost|SUPER|G
-|root||root|localhost|SUPER|G
-|root||jeong-yewon|localhost|TRIGGER|G
-|root||root|localhost|TRIGGER|G
-|root||jeong-yewon|localhost|UPDATE|G
-|root||root|localhost|UPDATE|G
-|root||jeong-yewon|localhost|grant option|G
-|root||root|localhost|grant option|G
-test|schema||&apos;&apos;||ALTER|G
-test|schema||&apos;&apos;||CREATE|G
-test|schema||&apos;&apos;||CREATE ROUTINE|G
-test|schema||&apos;&apos;||CREATE TEMPORARY TABLES|G
-test|schema||&apos;&apos;||CREATE VIEW|G
-test|schema||&apos;&apos;||DELETE|G
-test|schema||&apos;&apos;||DELETE HISTORY|G
-test|schema||&apos;&apos;||DROP|G
-test|schema||&apos;&apos;||EVENT|G
-test|schema||&apos;&apos;||INDEX|G
-test|schema||&apos;&apos;||INSERT|G
-test|schema||&apos;&apos;||LOCK TABLES|G
-test|schema||&apos;&apos;||REFERENCES|G
-test|schema||&apos;&apos;||SELECT|G
-test|schema||&apos;&apos;||SHOW VIEW|G
-test|schema||&apos;&apos;||TRIGGER|G
-test|schema||&apos;&apos;||UPDATE|G
-test\\_%|schema||&apos;&apos;||ALTER|G
-test\\_%|schema||&apos;&apos;||CREATE|G
-test\\_%|schema||&apos;&apos;||CREATE ROUTINE|G
-test\\_%|schema||&apos;&apos;||CREATE TEMPORARY TABLES|G
-test\\_%|schema||&apos;&apos;||CREATE VIEW|G
-test\\_%|schema||&apos;&apos;||DELETE|G
-test\\_%|schema||&apos;&apos;||DELETE HISTORY|G
-test\\_%|schema||&apos;&apos;||DROP|G
-test\\_%|schema||&apos;&apos;||EVENT|G
-test\\_%|schema||&apos;&apos;||INDEX|G
-test\\_%|schema||&apos;&apos;||INSERT|G
-test\\_%|schema||&apos;&apos;||LOCK TABLES|G
-test\\_%|schema||&apos;&apos;||REFERENCES|G
-test\\_%|schema||&apos;&apos;||SELECT|G
-test\\_%|schema||&apos;&apos;||SHOW VIEW|G
-test\\_%|schema||&apos;&apos;||TRIGGER|G
-test\\_%|schema||&apos;&apos;||UPDATE|G
-testdb|schema||username||ALTER|G
-testdb|schema||username||ALTER ROUTINE|G
-testdb|schema||username||CREATE|G
-testdb|schema||username||CREATE ROUTINE|G
-testdb|schema||username||CREATE TEMPORARY TABLES|G
-testdb|schema||username||CREATE VIEW|G
-testdb|schema||username||DELETE|G
-testdb|schema||username||DELETE HISTORY|G
-testdb|schema||username||DROP|G
-testdb|schema||username||EVENT|G
-testdb|schema||username||EXECUTE|G
-testdb|schema||username||INDEX|G
-testdb|schema||username||INSERT|G
-testdb|schema||username||LOCK TABLES|G
-testdb|schema||username||REFERENCES|G
-testdb|schema||username||SELECT|G
-testdb|schema||username||SHOW VIEW|G
-testdb|schema||username||TRIGGER|G
-testdb|schema||username||UPDATE|G
-wp|schema||wp||ALTER|G
-wp|schema||wp||ALTER ROUTINE|G
-wp|schema||wp||CREATE|G
-wp|schema||wp||CREATE ROUTINE|G
-wp|schema||wp||CREATE TEMPORARY TABLES|G
-wp|schema||wp||CREATE VIEW|G
-wp|schema||wp||DELETE|G
-wp|schema||wp||DELETE HISTORY|G
-wp|schema||wp||DROP|G
-wp|schema||wp||EVENT|G
-wp|schema||wp||EXECUTE|G
-wp|schema||wp||INDEX|G
-wp|schema||wp||INSERT|G
-wp|schema||wp||LOCK TABLES|G
-wp|schema||wp||REFERENCES|G
-wp|schema||wp||SELECT|G
-wp|schema||wp||SHOW VIEW|G
-wp|schema||wp||TRIGGER|G
-wp|schema||wp||UPDATE|G</Grants>
-      <ServerVersion>10.10.2</ServerVersion>
-    </root>
+  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.40">
+    <root id="1"/>
     <collation id="2" parent="1" name="armscii8_bin">
       <Charset>armscii8</Charset>
     </collation>
@@ -1455,9 +1301,9 @@ uyu|||username|localhost|UPDATE|G</Grants>
       <Type>btree</Type>
     </index>
     <key id="537" parent="529" name="PRIMARY">
-      <ColNames>folder_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>folder_id</UnderlyingIndexColNames>
     </key>
     <column id="538" parent="530" name="link_id">
       <AutoIncrement>1</AutoIncrement>
@@ -1495,9 +1341,9 @@ uyu|||username|localhost|UPDATE|G</Grants>
       <Position>8</Position>
     </column>
     <key id="546" parent="530" name="PRIMARY">
-      <ColNames>link_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>link_id</UnderlyingIndexColNames>
     </key>
     <column id="547" parent="531" name="tag_id">
       <AutoIncrement>1</AutoIncrement>
@@ -1510,9 +1356,9 @@ uyu|||username|localhost|UPDATE|G</Grants>
       <Position>2</Position>
     </column>
     <key id="549" parent="531" name="PRIMARY">
-      <ColNames>tag_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>tag_id</UnderlyingIndexColNames>
     </key>
   </database-model>
 </dataSource>
