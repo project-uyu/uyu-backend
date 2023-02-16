@@ -30,6 +30,7 @@ public class LinkServiceImpl implements LinkService {
         List<TagListResponseDto> tagLists = linkTagRepository.findTagsByLinkIdUsingFetchJoinTag(linkId)
                 .stream().map(tag -> new TagListResponseDto(tag)).collect(Collectors.toList());
         return LinkResponseDto.builder()
+                .linkId(linkId)
                 .content(link.getContent())
                 .createdDate(link.getCreatedDate())
                 .hit(link.getHit())
