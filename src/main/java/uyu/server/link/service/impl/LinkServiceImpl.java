@@ -3,8 +3,10 @@ package uyu.server.link.service.impl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import uyu.server.link.repository.entity.Link;
-import uyu.server.link.repository.repository.LinkRepository;
+import uyu.server.folder.data.entity.Folder;
+import uyu.server.folder.data.repository.FolderRepository;
+import uyu.server.link.data.entity.Link;
+import uyu.server.link.data.repository.LinkRepository;
 import uyu.server.link.service.LinkService;
 import uyu.server.link.web.dto.LinkRequestDto;
 import uyu.server.link.web.dto.LinkResponseDto;
@@ -12,10 +14,7 @@ import uyu.server.linkTag.data.entity.LinkTag;
 import uyu.server.linkTag.data.repository.LinkTagRepository;
 import uyu.server.tag.web.dto.TagListResponseDto;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -23,6 +22,7 @@ import java.util.stream.Collectors;
 @Transactional(readOnly = true)
 public class LinkServiceImpl implements LinkService {
     private final LinkRepository linkRepository;
+    private final FolderRepository folderRepository;
     private final LinkTagRepository linkTagRepository;
     @Override
     public LinkResponseDto getLinkDetail(Long linkId) {
@@ -81,5 +81,38 @@ public class LinkServiceImpl implements LinkService {
         //링크 지우기
         linkRepository.delete(linkRepository.findById(linkId).orElseThrow(()-> new IllegalArgumentException("해당 아이디를 가진 링크가 존재하지 않습니다."+linkId)));
         return linkId;
+    }
+
+    @Override
+    public Long createLink(Long folderId, LinkRequestDto linkDto) {
+        Folder folder = folderRepository.findById(folderId).orElseThrow(()-> new IllegalArgumentException("해당 아이디를 가진 폴더가 없습니다." + folderId));
+        //링크 생성
+        Link link = linkRepository.save(Link.builder()
+                        .url(linkDto.getUrl())
+                        .content(linkDto.getContent())
+                        .folder(folder)
+                .build());
+        //링크 태그 생성
+        linkDto.getTagLists().stream().forEach(tagDto -> linkTagRepository.save(LinkTag.builder().link(link).tag(tagDto.toEntity()).build()));
+        return link.getId();
+    }
+
+    @Override
+    public List<LinkResponseDto> getLinkList(Long folderId) {
+        List<LinkResponseDto> linkResponseDtos = new ArrayList<>();
+        Folder folder = folderRepository.findById(folderId).orElseThrow(()-> new IllegalArgumentException("해당 아이디를 가진 폴더가 없습니다." + folderId));
+
+        // 폴더 내부의 링크 정보와 연결
+        folder.getLinks().forEach(link -> {
+            List<TagListResponseDto> tagListResponseDtos = new ArrayList<>();
+
+            // 링크 내부의 태그 정보와 연결
+            linkTagRepository.findTagsByLinkIdUsingFetchJoinTag(link.getId())
+                    .forEach(tag -> tagListResponseDtos.add(new TagListResponseDto(tag)));
+
+            linkResponseDtos.add(new LinkResponseDto(link, tagListResponseDtos));
+        });
+
+        return linkResponseDtos;
     }
 }

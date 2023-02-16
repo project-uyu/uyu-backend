@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bf5b5bb-f435-4a01-a1e1-f4b491ca7f86" name="Changes" comment="[feat] 엔티티 생성">
-      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/folder/service/impl/FolderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/folder/service/impl/FolderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +38,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Kotlin Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -58,7 +59,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
   </component>
@@ -112,82 +113,14 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="uyu.server.link.service" />
       <recent name="uyu.server.folder.web" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LinkControllerTest.deleteLink">
-    <configuration name="LinkControllerTest.deleteLink" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;uyu.server.link.web.LinkControllerTest.deleteLink&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="LinkControllerTest.getLinkDetail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;uyu.server.link.web.LinkControllerTest.getLinkDetail&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="LinkControllerTest.modifyLinkDetail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;uyu.server.link.web.LinkControllerTest.modifyLinkDetail&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ACTIVE_PROFILES" value="local" />
       <module name="server.main" />
@@ -202,13 +135,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Gradle.LinkControllerTest.deleteLink" />
-        <item itemvalue="Gradle.LinkControllerTest.modifyLinkDetail" />
-        <item itemvalue="Gradle.LinkControllerTest.getLinkDetail" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -225,7 +151,7 @@
       <workItem from="1675400000846" duration="1078000" />
       <workItem from="1676193656751" duration="18000" />
       <workItem from="1676193679841" duration="7649000" />
-      <workItem from="1676511880913" duration="355000" />
+      <workItem from="1676514137587" duration="1043000" />
     </task>
     <task id="LOCAL-00001" summary="[feat] 폴더 구조 생성">
       <created>1675400009045</created>
@@ -297,21 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675915472140</updated>
     </task>
-    <task id="LOCAL-00011" summary="[feat] 테스트 틀 구축">
-      <created>1676473609789</created>
+    <task id="LOCAL-00011" summary="[feat] 링크 생성 + 링크 리스트 반환 API 완료">
+      <created>1676514088612</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1676473609789</updated>
+      <updated>1676514088612</updated>
     </task>
-    <task id="LOCAL-00012" summary="[feat] 컨트롤러 테스트 완료">
-      <created>1676511863478</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1676511863478</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,8 +270,7 @@
     <MESSAGE value="[feat] 링크 상세조회 서비스 완료" />
     <MESSAGE value="[feat] transactional 설정&#10;- read_only 기본&#10;- 데이터 변경 서비스에만 @transactional 추가로 붙임" />
     <MESSAGE value="[feat] 링크 수정 서비스 완료&#10;- 기존에 존재하던 태그와 비교&#10;  - 새롭게 생성한 태그면 생성&#10;  - 기존 태그가 사라졌을 시 삭제" />
-    <MESSAGE value="[feat] 테스트 틀 구축" />
-    <MESSAGE value="[feat] 컨트롤러 테스트 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] 컨트롤러 테스트 완료" />
+    <MESSAGE value="[feat] 링크 생성 + 링크 리스트 반환 API 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] 링크 생성 + 링크 리스트 반환 API 완료" />
   </component>
 </project>
