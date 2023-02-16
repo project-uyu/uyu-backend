@@ -4,8 +4,6 @@ import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.data.domain.PageRequest;
 import uyu.server.link.data.entity.Link;
 
 import java.util.List;
@@ -40,4 +38,9 @@ public class Folder {
             this.parentFolder = parentFolder;
         }
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
 }

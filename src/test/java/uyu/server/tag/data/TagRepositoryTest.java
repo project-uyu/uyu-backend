@@ -1,4 +1,4 @@
-package uyu.server.tag.repository;
+package uyu.server.tag.data;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -17,6 +17,7 @@ public class TagRepositoryTest {
     @Autowired
     TagRepository tagRepository;
     Tag tag;
+
     @BeforeEach
     void settings() {
         tag = new Tag("Spring");
@@ -29,7 +30,7 @@ public class TagRepositoryTest {
         //when
         Long id = 1L;
         tagRepository.save(tag);
-        Tag findTag = tagRepository.findById(id).orElseThrow(()-> new IllegalArgumentException("해당 아이디를 가진 태그가 없습니다." + id));
+        Tag findTag = tagRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 아이디를 가진 태그가 없습니다." + id));
 
         //then
         assertEquals(id, findTag.getId());

@@ -40,4 +40,8 @@ public class Link extends BaseTimeEntity {
         this.url = linkDto.getUrl();
         return this;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
