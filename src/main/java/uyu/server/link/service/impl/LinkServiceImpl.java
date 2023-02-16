@@ -3,6 +3,8 @@ package uyu.server.link.service.impl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import uyu.server.folder.data.entity.Folder;
+import uyu.server.folder.data.repository.FolderRepository;
 import uyu.server.link.data.entity.Link;
 import uyu.server.link.data.repository.LinkRepository;
 import uyu.server.link.service.LinkService;
@@ -23,6 +25,7 @@ import java.util.stream.Collectors;
 @Transactional(readOnly = true)
 public class LinkServiceImpl implements LinkService {
     private final LinkRepository linkRepository;
+    private final FolderRepository folderRepository;
     private final LinkTagRepository linkTagRepository;
     @Override
     public LinkResponseDto getLinkDetail(Long linkId) {
@@ -84,7 +87,12 @@ public class LinkServiceImpl implements LinkService {
     }
 
     @Override
-    public Long createLink(Long folderId, LinkRequestDto dto) {
+    public Long createLink(Long folderId, LinkRequestDto linkDto) {
+        Folder folder = folderRepository.findById(folderId).orElseThrow(()-> new IllegalArgumentException("해당 아이디를 가진 폴더가 없습니다." + folderId));
+
+        //링크 태그 생성
+        linkDto.getTagLists().stream().forEach(tagDto -> linkTagRepository.save(LinkTag.builder().link(linkDto.toEntity()).tag(tagDto.toEntity()).build()));
+
         return null;
     }
 

@@ -6,6 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.domain.PageRequest;
+import uyu.server.link.data.entity.Link;
+
+import java.util.List;
 
 @Getter
 @NoArgsConstructor
@@ -17,6 +20,8 @@ public class Folder {
     @Column(name = "folder_id")
     private Long id;
     private String title;
+    @OneToMany(mappedBy = "folder", orphanRemoval = true, cascade = CascadeType.ALL)
+    private List<Link> links;
     @OneToOne(fetch = FetchType.LAZY, orphanRemoval = true, cascade = CascadeType.ALL)
     private Folder parentFolder;
 
