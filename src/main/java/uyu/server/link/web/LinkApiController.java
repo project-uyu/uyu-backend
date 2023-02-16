@@ -28,7 +28,7 @@ public class LinkApiController {
     }
 
     @DeleteMapping("{linkId}")
-    public ResponseEntity<Long> deleteTag(@PathVariable @NotNull(message="필수값입니다.") Long linkId) {
+    public ResponseEntity<Long> deleteLink(@PathVariable @NotNull(message="필수값입니다.") Long linkId) {
         Long deleteLink = linkService.deleteLink(linkId);
         return ResponseEntity.status(HttpStatus.OK).body(deleteLink);
     }
