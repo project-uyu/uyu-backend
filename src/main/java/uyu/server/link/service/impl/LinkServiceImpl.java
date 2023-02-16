@@ -82,7 +82,7 @@ public class LinkServiceImpl implements LinkService {
         linkRepository.delete(linkRepository.findById(linkId).orElseThrow(()-> new IllegalArgumentException("해당 아이디를 가진 링크가 존재하지 않습니다."+linkId)));
         return linkId;
     }
-
+    @Transactional
     @Override
     public Long createLink(Long folderId, LinkRequestDto linkDto) {
         Folder folder = folderRepository.findById(folderId).orElseThrow(()-> new IllegalArgumentException("해당 아이디를 가진 폴더가 없습니다." + folderId));

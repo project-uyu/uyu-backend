@@ -19,8 +19,8 @@ public class TagServiceImpl implements TagService {
     @Override
     public Long createTag(String name) {
         return tagRepository.save(Tag.builder()
-                        .name(name)
-                        .build()).getId();
+                .name(name)
+                .build()).getId();
     }
 
     @Override
