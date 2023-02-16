@@ -82,4 +82,14 @@ public class LinkServiceImpl implements LinkService {
         linkRepository.delete(linkRepository.findById(linkId).orElseThrow(()-> new IllegalArgumentException("해당 아이디를 가진 링크가 존재하지 않습니다."+linkId)));
         return linkId;
     }
+
+    @Override
+    public Long createLink(Long folderId, LinkRequestDto dto) {
+        return null;
+    }
+
+    @Override
+    public List<LinkResponseDto> getLinkList(Long folderId) {
+        return null;
+    }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="uyu">
-  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.39">
+  <database-model serializer="dbm" dbms="MARIADB" family-id="MARIADB" format-version="4.40">
     <root id="1">
       <DefaultCasing>mixed/mixed</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -1455,9 +1455,9 @@ uyu|||username|localhost|UPDATE|G</Grants>
       <Type>btree</Type>
     </index>
     <key id="537" parent="529" name="PRIMARY">
-      <ColNames>folder_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>folder_id</UnderlyingIndexColNames>
     </key>
     <column id="538" parent="530" name="link_id">
       <AutoIncrement>1</AutoIncrement>
@@ -1495,9 +1495,9 @@ uyu|||username|localhost|UPDATE|G</Grants>
       <Position>8</Position>
     </column>
     <key id="546" parent="530" name="PRIMARY">
-      <ColNames>link_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>link_id</UnderlyingIndexColNames>
     </key>
     <column id="547" parent="531" name="tag_id">
       <AutoIncrement>1</AutoIncrement>
@@ -1510,9 +1510,9 @@ uyu|||username|localhost|UPDATE|G</Grants>
       <Position>2</Position>
     </column>
     <key id="549" parent="531" name="PRIMARY">
-      <ColNames>tag_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
+      <UnderlyingIndexColNames>tag_id</UnderlyingIndexColNames>
     </key>
   </database-model>
 </dataSource>

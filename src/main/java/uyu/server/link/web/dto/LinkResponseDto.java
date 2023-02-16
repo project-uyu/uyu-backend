@@ -9,6 +9,7 @@ import java.util.List;
 
 @Getter
 public class LinkResponseDto {
+    private Long linkId;
     private String url;
     private String content;
     private List<TagListResponseDto> tagLists;
@@ -16,7 +17,8 @@ public class LinkResponseDto {
     private LocalDate createdDate;
     private LocalDate modifiedDate;
     @Builder
-    public LinkResponseDto(String url, String content, List<TagListResponseDto> tagLists, Long hit, LocalDate createdDate, LocalDate modifiedDate) {
+    public LinkResponseDto(Long linkId, String url, String content, List<TagListResponseDto> tagLists, Long hit, LocalDate createdDate, LocalDate modifiedDate) {
+        this.linkId = linkId;
         this.url = url;
         this.content = content;
         this.tagLists = tagLists;
