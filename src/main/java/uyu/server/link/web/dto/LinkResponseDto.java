@@ -2,6 +2,7 @@ package uyu.server.link.web.dto;
 
 import lombok.Builder;
 import lombok.Getter;
+import uyu.server.link.data.entity.Link;
 import uyu.server.tag.web.dto.TagListResponseDto;
 
 import java.time.LocalDate;
@@ -25,5 +26,14 @@ public class LinkResponseDto {
         this.hit = hit;
         this.createdDate = createdDate;
         this.modifiedDate = modifiedDate;
+    }
+    public LinkResponseDto(Link link, List<TagListResponseDto> tagLists) {
+        this.linkId = link.getId();
+        this.url = link.getUrl();
+        this.content = link.getContent();
+        this.tagLists = tagLists;
+        this.hit = link.getHit();
+        this.createdDate = link.getCreatedDate();
+        this.modifiedDate = link.getModifiedDate();
     }
 }
