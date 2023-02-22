@@ -5,7 +5,7 @@ import lombok.*;
 
 @Getter
 @NoArgsConstructor
-@Entity
+@Entity(name = "uyu.server.tag.data.entity.Tag")
 @Table(name = "tag")
 public class Tag {
     @Id
