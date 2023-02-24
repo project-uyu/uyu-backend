@@ -3,14 +3,21 @@ package uyu.server.util;
 import io.jsonwebtoken.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 @Component
+@AllArgsConstructor
 public class JwtInterceptor implements HandlerInterceptor {
+
+    private final JwtUtil jwtUtil;
+
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+    public boolean preHandle(HttpServletRequest request,
+                             HttpServletResponse response,
+                             Object handler) throws Exception {
         //클라이언트 요청에서 JWT 토큰 추출
         String authorizationHeader = request.getHeader("Authorization");
 
