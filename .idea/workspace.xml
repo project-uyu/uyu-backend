@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bf5b5bb-f435-4a01-a1e1-f4b491ca7f86" name="Changes" comment="[feat] 태그 서비스 + 레포지토리 테스트 완료">
-      <change afterPath="$PROJECT_DIR$/src/main/java/uyu/server/member/data/entity/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uyu/server/util/JwtUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +285,7 @@
       <workItem from="1676193679841" duration="7649000" />
       <workItem from="1676514137587" duration="1043000" />
       <workItem from="1676523708592" duration="2631000" />
-      <workItem from="1677230031917" duration="6068000" />
+      <workItem from="1677230031917" duration="6428000" />
     </task>
     <task id="LOCAL-00001" summary="[feat] 폴더 구조 생성">
       <created>1675400009045</created>
