@@ -11,6 +11,7 @@ import java.util.List;
 @Getter
 public class LinkResponseDto {
     private Long linkId;
+    private String title;
     private String url;
     private String content;
     private List<TagListResponseDto> tagLists;
@@ -18,9 +19,10 @@ public class LinkResponseDto {
     private LocalDate createdDate;
     private LocalDate modifiedDate;
     @Builder
-    public LinkResponseDto(Long linkId, String url, String content, List<TagListResponseDto> tagLists, Long hit, LocalDate createdDate, LocalDate modifiedDate) {
+    public LinkResponseDto(Long linkId, String title, String url, String content, List<TagListResponseDto> tagLists, Long hit, LocalDate createdDate, LocalDate modifiedDate) {
         this.linkId = linkId;
         this.url = url;
+        this.title = title;
         this.content = content;
         this.tagLists = tagLists;
         this.hit = hit;
@@ -30,6 +32,7 @@ public class LinkResponseDto {
     public LinkResponseDto(Link link, List<TagListResponseDto> tagLists) {
         this.linkId = link.getId();
         this.url = link.getUrl();
+        this.title = link.getTitle();
         this.content = link.getContent();
         this.tagLists = tagLists;
         this.hit = link.getHit();
