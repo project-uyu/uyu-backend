@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.040s</div>
+<div class="counter">0.074s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,25 +81,25 @@
 <tr>
 <td class="success">링크를 생성할 수 있다.</td>
 <td class="success">createLink()</td>
-<td class="success">0.004s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">링크를 삭제할 수 있다.</td>
 <td class="success">deleteLink()</td>
-<td class="success">0.002s</td>
+<td class="success">0.006s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">링크 세부 내용을 알 수 있다.</td>
 <td class="success">getLinkDetail()</td>
-<td class="success">0.030s</td>
+<td class="success">0.053s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">링크를 수정할 수 있다.</td>
 <td class="success">modifyLink()</td>
-<td class="success">0.004s</td>
+<td class="success">0.008s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -107,90 +107,90 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>13:30:33.984 [Test worker] DEBUG org.springframework.test.context.support.DefaultTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [LinkServiceTest]: using DelegatingSmartContextLoader
-13:30:33.987 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [uyu.server.link.service.LinkServiceTest]: no resource found for suffixes {-context.xml}.
-13:30:33.988 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [uyu.server.link.service.LinkServiceTest]: LinkServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-13:30:34.005 [Test worker] DEBUG org.springframework.test.context.support.DefaultTestContextBootstrapper - Using ContextCustomizers for test class [LinkServiceTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer]
-13:30:34.020 [Test worker] DEBUG org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners for test class [LinkServiceTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
-13:30:34.021 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [LinkServiceTest], class annotated with @DirtiesContext [false] with mode [null]
-13:30:34.361 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test class uyu.server.link.service.LinkServiceTest
-13:30:34.361 [Test worker] DEBUG org.springframework.test.context.support.AbstractGenericContextLoader - Loading ApplicationContext for test class uyu.server.link.service.LinkServiceTest
-13:30:34.383 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Activating profiles []
-13:30:34.384 [Test worker] DEBUG org.springframework.test.context.support.AnnotationConfigContextLoader - Registering component classes: []
-13:30:34.398 [Test worker] DEBUG org.springframework.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@351f2244
-13:30:34.405 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
-13:30:34.415 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor'
-13:30:34.423 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
-13:30:34.424 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
-13:30:34.424 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
-13:30:34.425 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
-13:30:34.427 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
-13:30:34.428 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor$SpyPostProcessor'
-13:30:34.439 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 0, missCount = 1]
-13:30:34.442 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 1, missCount = 1]
-13:30:34.445 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test method: class [LinkServiceTest], method [getLinkDetail], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
-13:30:34.448 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 2, missCount = 1]
-13:30:34.449 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 3, missCount = 1]
-13:30:34.449 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 4, missCount = 1]
-13:30:34.453 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 5, missCount = 1]
-13:30:34.469 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 6, missCount = 1]
-13:30:34.469 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 7, missCount = 1]
-13:30:34.470 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 8, missCount = 1]
-13:30:34.470 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 9, missCount = 1]
-13:30:34.470 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 10, missCount = 1]
-13:30:34.471 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 11, missCount = 1]
-13:30:34.471 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 12, missCount = 1]
-13:30:34.471 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - After test method: class [LinkServiceTest], method [getLinkDetail], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
-13:30:34.474 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test class uyu.server.link.service.LinkServiceTest
-13:30:34.475 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 13, missCount = 1]
-13:30:34.475 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 14, missCount = 1]
-13:30:34.476 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test method: class [LinkServiceTest], method [modifyLink], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
-13:30:34.476 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 15, missCount = 1]
-13:30:34.476 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 16, missCount = 1]
-13:30:34.476 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 17, missCount = 1]
-13:30:34.476 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 18, missCount = 1]
-13:30:34.478 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 19, missCount = 1]
-13:30:34.478 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 20, missCount = 1]
-13:30:34.479 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 21, missCount = 1]
-13:30:34.479 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 22, missCount = 1]
-13:30:34.479 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 23, missCount = 1]
-13:30:34.479 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 24, missCount = 1]
-13:30:34.479 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 25, missCount = 1]
-13:30:34.479 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - After test method: class [LinkServiceTest], method [modifyLink], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
-13:30:34.480 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test class uyu.server.link.service.LinkServiceTest
-13:30:34.480 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 26, missCount = 1]
-13:30:34.480 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 27, missCount = 1]
-13:30:34.481 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test method: class [LinkServiceTest], method [createLink], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
-13:30:34.481 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 28, missCount = 1]
-13:30:34.481 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 29, missCount = 1]
-13:30:34.482 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 30, missCount = 1]
-13:30:34.482 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 31, missCount = 1]
-13:30:34.483 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 32, missCount = 1]
-13:30:34.484 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 33, missCount = 1]
-13:30:34.484 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 34, missCount = 1]
-13:30:34.484 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 35, missCount = 1]
-13:30:34.484 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 36, missCount = 1]
-13:30:34.484 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 37, missCount = 1]
-13:30:34.484 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 38, missCount = 1]
-13:30:34.484 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - After test method: class [LinkServiceTest], method [createLink], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
-13:30:34.485 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test class uyu.server.link.service.LinkServiceTest
-13:30:34.485 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 39, missCount = 1]
-13:30:34.485 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 40, missCount = 1]
-13:30:34.486 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test method: class [LinkServiceTest], method [deleteLink], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
-13:30:34.487 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 41, missCount = 1]
-13:30:34.487 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 42, missCount = 1]
-13:30:34.487 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 43, missCount = 1]
-13:30:34.487 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 44, missCount = 1]
-13:30:34.488 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 45, missCount = 1]
-13:30:34.488 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 46, missCount = 1]
-13:30:34.488 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 47, missCount = 1]
-13:30:34.488 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 48, missCount = 1]
-13:30:34.488 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 49, missCount = 1]
-13:30:34.489 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 50, missCount = 1]
-13:30:34.489 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 51, missCount = 1]
-13:30:34.489 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - After test method: class [LinkServiceTest], method [deleteLink], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
-13:30:34.490 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1aabf50d size = 1, maxSize = 32, parentContextCount = 0, hitCount = 52, missCount = 1]
-13:30:34.490 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - After test class: class [LinkServiceTest], class annotated with @DirtiesContext [false] with mode [null]
+<pre>13:58:26.701 [Test worker] DEBUG org.springframework.test.context.support.DefaultTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [LinkServiceTest]: using DelegatingSmartContextLoader
+13:58:26.707 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [uyu.server.link.service.LinkServiceTest]: no resource found for suffixes {-context.xml}.
+13:58:26.708 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [uyu.server.link.service.LinkServiceTest]: LinkServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:58:26.737 [Test worker] DEBUG org.springframework.test.context.support.DefaultTestContextBootstrapper - Using ContextCustomizers for test class [LinkServiceTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer]
+13:58:26.761 [Test worker] DEBUG org.springframework.test.context.support.DefaultTestContextBootstrapper - Using TestExecutionListeners for test class [LinkServiceTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+13:58:26.763 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [LinkServiceTest], class annotated with @DirtiesContext [false] with mode [null]
+13:58:27.395 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test class uyu.server.link.service.LinkServiceTest
+13:58:27.396 [Test worker] DEBUG org.springframework.test.context.support.AbstractGenericContextLoader - Loading ApplicationContext for test class uyu.server.link.service.LinkServiceTest
+13:58:27.430 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment - Activating profiles []
+13:58:27.430 [Test worker] DEBUG org.springframework.test.context.support.AnnotationConfigContextLoader - Registering component classes: []
+13:58:27.452 [Test worker] DEBUG org.springframework.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@2a03d65c
+13:58:27.463 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+13:58:27.478 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor'
+13:58:27.492 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'
+13:58:27.494 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerFactory'
+13:58:27.495 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+13:58:27.497 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+13:58:27.501 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+13:58:27.501 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.test.mock.mockito.MockitoPostProcessor$SpyPostProcessor'
+13:58:27.521 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 0, missCount = 1]
+13:58:27.527 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 1, missCount = 1]
+13:58:27.534 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test method: class [LinkServiceTest], method [getLinkDetail], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+13:58:27.540 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 2, missCount = 1]
+13:58:27.541 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 3, missCount = 1]
+13:58:27.541 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 4, missCount = 1]
+13:58:27.550 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 5, missCount = 1]
+13:58:27.576 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 6, missCount = 1]
+13:58:27.577 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 7, missCount = 1]
+13:58:27.577 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 8, missCount = 1]
+13:58:27.577 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 9, missCount = 1]
+13:58:27.578 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 10, missCount = 1]
+13:58:27.579 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 11, missCount = 1]
+13:58:27.579 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 12, missCount = 1]
+13:58:27.580 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - After test method: class [LinkServiceTest], method [getLinkDetail], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+13:58:27.586 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test class uyu.server.link.service.LinkServiceTest
+13:58:27.586 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 13, missCount = 1]
+13:58:27.587 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 14, missCount = 1]
+13:58:27.589 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test method: class [LinkServiceTest], method [modifyLink], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+13:58:27.589 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 15, missCount = 1]
+13:58:27.589 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 16, missCount = 1]
+13:58:27.590 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 17, missCount = 1]
+13:58:27.590 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 18, missCount = 1]
+13:58:27.594 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 19, missCount = 1]
+13:58:27.595 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 20, missCount = 1]
+13:58:27.595 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 21, missCount = 1]
+13:58:27.595 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 22, missCount = 1]
+13:58:27.595 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 23, missCount = 1]
+13:58:27.596 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 24, missCount = 1]
+13:58:27.596 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 25, missCount = 1]
+13:58:27.596 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - After test method: class [LinkServiceTest], method [modifyLink], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+13:58:27.598 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test class uyu.server.link.service.LinkServiceTest
+13:58:27.598 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 26, missCount = 1]
+13:58:27.598 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 27, missCount = 1]
+13:58:27.600 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test method: class [LinkServiceTest], method [createLink], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+13:58:27.601 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 28, missCount = 1]
+13:58:27.601 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 29, missCount = 1]
+13:58:27.601 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 30, missCount = 1]
+13:58:27.601 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 31, missCount = 1]
+13:58:27.604 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 32, missCount = 1]
+13:58:27.604 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 33, missCount = 1]
+13:58:27.605 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 34, missCount = 1]
+13:58:27.605 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 35, missCount = 1]
+13:58:27.605 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 36, missCount = 1]
+13:58:27.605 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 37, missCount = 1]
+13:58:27.606 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 38, missCount = 1]
+13:58:27.606 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - After test method: class [LinkServiceTest], method [createLink], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+13:58:27.608 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test class uyu.server.link.service.LinkServiceTest
+13:58:27.608 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 39, missCount = 1]
+13:58:27.608 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 40, missCount = 1]
+13:58:27.610 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test method: class [LinkServiceTest], method [deleteLink], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+13:58:27.610 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 41, missCount = 1]
+13:58:27.611 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 42, missCount = 1]
+13:58:27.611 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 43, missCount = 1]
+13:58:27.611 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 44, missCount = 1]
+13:58:27.613 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 45, missCount = 1]
+13:58:27.613 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 46, missCount = 1]
+13:58:27.614 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 47, missCount = 1]
+13:58:27.614 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 48, missCount = 1]
+13:58:27.614 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 49, missCount = 1]
+13:58:27.615 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 50, missCount = 1]
+13:58:27.615 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 51, missCount = 1]
+13:58:27.615 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - After test method: class [LinkServiceTest], method [deleteLink], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesContext [false] with mode [null]
+13:58:27.617 [Test worker] DEBUG org.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@1deceb67 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 52, missCount = 1]
+13:58:27.618 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - After test class: class [LinkServiceTest], class annotated with @DirtiesContext [false] with mode [null]
 </pre>
 </span>
 </div>
@@ -202,7 +202,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.6</a> at 2023. 2. 16. 오후 1:30:34</p>
+<a href="http://www.gradle.org">Gradle 7.6</a> at 2023. 2. 28. 오후 1:58:27</p>
 </div>
 </div>
 </body>
