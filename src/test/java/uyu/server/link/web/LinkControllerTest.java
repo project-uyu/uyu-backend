@@ -48,7 +48,7 @@ public class LinkControllerTest {
                 .url("https://github.com/project-uyu/uyu-backend")
                 .tagLists(dtoList)
                 .build();
-        requestDto = new LinkRequestDto("https://github.com/project-uyu/uyu-backend","링크 내용",dtoList);
+        requestDto = new LinkRequestDto("https://github.com/project-uyu/uyu-backend","링크 제목","링크 내용",dtoList);
     }
 
     @Test

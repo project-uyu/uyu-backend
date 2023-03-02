@@ -57,6 +57,7 @@ public class LinkServiceTest {
 
         link = Link.builder()
                 .url("https://github.com/project-uyu/uyu-backend")
+                .title("링크 제목")
                 .content("링크 내용")
                 .folder(folder)
                 .build();
@@ -71,7 +72,7 @@ public class LinkServiceTest {
 
         responseDto = new LinkResponseDto(link, dtoList);
 
-        requestDto = new LinkRequestDto(link.getUrl(), link.getContent(), dtoList);
+        requestDto = new LinkRequestDto(link.getUrl(), link.getTitle(), link.getContent(), dtoList);
 
         tags.add(tag);
 
@@ -107,6 +108,7 @@ public class LinkServiceTest {
         assertEquals(linkResponseDto.getContent(), link.getContent());
         assertEquals(linkResponseDto.getCreatedDate(), link.getCreatedDate());
         assertEquals(linkResponseDto.getHit(), link.getHit());
+        assertEquals(linkResponseDto.getTitle(), link.getTitle());
         assertEquals(linkResponseDto.getModifiedDate(), link.getModifiedDate());
         assertEquals(linkResponseDto.getTagLists().get(0).getName(), new TagListResponseDto(tags.get(0)).getName());
     }

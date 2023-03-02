@@ -18,6 +18,7 @@ public class Link extends BaseTimeEntity {
     @Column(name = "link_id")
     private Long id;
     private String url;
+    private String title;
     private String content;
     private Long hit;
     private boolean isDeleted;
@@ -27,8 +28,9 @@ public class Link extends BaseTimeEntity {
     private Folder folder;
 
     @Builder // 빌더 형태로 만들어줌
-    public Link(String url, String content,Folder folder) {
+    public Link(String url, String title, String content, Folder folder) {
         this.url = url;
+        this.title = title;
         this.content = content;
         this.hit = 0L;
         this.folder = folder;
