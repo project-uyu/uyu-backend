@@ -1,6 +1,5 @@
 package uyu.server.folder.service.impl;
 
-import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,7 +9,7 @@ import uyu.server.folder.service.FolderService;
 import uyu.server.folder.web.dto.FolderDTO;
 
 import java.util.List;
-import java.util.Optional;
+import uyu.server.folder.web.dto.request.SearchFolderRequestDTO;
 
 @Service
 @RequiredArgsConstructor
@@ -56,6 +55,11 @@ public class FolderServiceImpl implements FolderService {
 
     @Override
     public List<FolderDTO> getFolderList(Long userId) {
+        return null;
+    }
+
+    @Override
+    public List<SearchFolderRequestDTO> searchFolder(String word) {
         return null;
     }
 }

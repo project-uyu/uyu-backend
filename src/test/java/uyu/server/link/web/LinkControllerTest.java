@@ -68,7 +68,7 @@ public class LinkControllerTest {
         mockMvc.perform(patch("/links/1")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(content))
-                .andDo(print())
+                . andDo(print())
                 .andExpect(status().isOk());
     }
 

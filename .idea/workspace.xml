@@ -4,39 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bf5b5bb-f435-4a01-a1e1-f4b491ca7f86" name="Changes" comment="[feat] link 엔티티에 title 컬럼 추가">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+    <list default="true" id="2bf5b5bb-f435-4a01-a1e1-f4b491ca7f86" name="Changes" comment="[test] link service 테스트 완료">
+      <change afterPath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/dto/request/SearchFolderRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/uyu/server/search/web/SearchApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/b/9bdc0173dd11bbad821b22a85ed3255d8df7c9e8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/data/entity/Link$LinkBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/data/entity/Link$LinkBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/data/entity/Link.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/data/entity/Link.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/service/impl/LinkServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/service/impl/LinkServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/web/dto/LinkRequestDto$LinkBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/web/dto/LinkRequestDto$LinkBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/web/dto/LinkRequestDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/web/dto/LinkRequestDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/web/dto/LinkResponseDto$LinkResponseDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/web/dto/LinkResponseDto$LinkResponseDtoBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/web/dto/LinkResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/web/dto/LinkResponseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/uyu/server/tag/repository/entity/Tag$TagBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/uyu/server/tag/repository/entity/Tag.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/uyu/server/link/service/LinkServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/uyu/server/link/service/LinkServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/uyu/server/link/web/LinkControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/uyu/server/link/web/LinkControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/uyu/server/tag/repository/TagRepositoryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/uyu.server.link.service.LinkServiceTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/uyu.server.link.service.LinkServiceTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/uyu.server.tag.service.TagServiceTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/uyu.server.link.service.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/uyu.server.link.service.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/uyu.server.tag.service.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-uyu.server.link.service.LinkServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-uyu.server.link.service.LinkServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-uyu.server.tag.service.TagServiceTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/uyu/server/link/service/LinkServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uyu/server/link/service/LinkServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/folder/service/FolderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/folder/service/FolderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/FolderApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/FolderApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/uyu/server/link/web/LinkControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uyu/server/link/web/LinkControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,43 +89,44 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelOrder2&quot;: &quot;2&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth2&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_directory_selection&quot;: &quot;/Users/jeong-yewon/projects/side-project/uyu-backend/src/main/java/uyu/server/folder/web&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jeong-yewon/projects/side-project/uyu-backend/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;f388e2a0991e057a0316947c380806f0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelOrder2": "2",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RequestMappingsPanelWidth2": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_directory_selection": "/Users/jeong-yewon/projects/side-project/uyu-backend/src/main/java/uyu/server/folder/web",
+    "last_opened_file_path": "/Users/jeong-yewon/projects/side-project/uyu-backend/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "spring.configuration.checksum": "f388e2a0991e057a0316947c380806f0",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb",
+      "mysql"
     ],
-    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;,
-      &quot;repository&quot;
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -319,6 +296,7 @@
       <workItem from="1676193679841" duration="7649000" />
       <workItem from="1676514137587" duration="1043000" />
       <workItem from="1676523708592" duration="2631000" />
+      <workItem from="1678063185667" duration="2615000" />
     </task>
     <task id="LOCAL-00001" summary="[feat] 폴더 구조 생성">
       <created>1675400009045</created>
