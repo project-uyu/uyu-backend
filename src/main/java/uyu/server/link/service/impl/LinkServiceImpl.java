@@ -10,6 +10,7 @@ import uyu.server.link.data.repository.LinkRepository;
 import uyu.server.link.service.LinkService;
 import uyu.server.link.web.dto.LinkRequestDto;
 import uyu.server.link.web.dto.LinkResponseDto;
+import uyu.server.link.web.dto.LinkSearchRequestDto;
 import uyu.server.linkTag.data.entity.LinkTag;
 import uyu.server.linkTag.data.repository.LinkTagRepository;
 import uyu.server.tag.web.dto.TagListResponseDto;
@@ -117,5 +118,10 @@ public class LinkServiceImpl implements LinkService {
         });
 
         return linkResponseDtos;
+    }
+
+    @Override
+    public List<LinkSearchRequestDto> searchLink(String word) {
+        return null;
     }
 }

@@ -1,6 +1,7 @@
 package uyu.server.link.web;
 
 import jakarta.validation.constraints.NotNull;
+import java.util.List;
 import lombok.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import uyu.server.link.service.LinkService;
 import uyu.server.link.web.dto.LinkRequestDto;
 import uyu.server.link.web.dto.LinkResponseDto;
+import uyu.server.link.web.dto.LinkSearchRequestDto;
 
 @RestController
 @RequestMapping("/links/")
@@ -31,5 +33,11 @@ public class LinkApiController {
     public ResponseEntity<Long> deleteLink(@PathVariable @NotNull(message="필수값입니다.") Long linkId) {
         Long deleteLink = linkService.deleteLink(linkId);
         return ResponseEntity.status(HttpStatus.OK).body(deleteLink);
+    }
+
+    @GetMapping("search")
+    public ResponseEntity<List<LinkSearchRequestDto>> searchLink(@RequestParam(value = "word") String word) {
+        List<LinkSearchRequestDto> searchLink = linkService.searchLink(word);
+        return ResponseEntity.status(HttpStatus.OK).body(searchLink);
     }
 }

@@ -58,8 +58,8 @@ public class FolderApiController {
 
     @GetMapping("search")
     public ResponseEntity<List<SearchFolderRequestDTO>> searchFolder(@RequestParam(value = "word") String word) {
-        List<SearchFolderRequestDTO> searchList = folderService.searchFolder(word);
-        return ResponseEntity.status(HttpStatus.OK).body(searchList);
+        List<SearchFolderRequestDTO> searchFolder = folderService.searchFolder(word);
+        return ResponseEntity.status(HttpStatus.OK).body(searchFolder);
     }
 
     @PostMapping("{folderId}/links/new")
