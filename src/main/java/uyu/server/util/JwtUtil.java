@@ -23,26 +23,28 @@ public class JwtUtil {
                 .setHeaderParam("typ", "JWT") // 토큰 타입
                 .setSubject("userToken") // 토큰 제목
                 .setExpiration(new Date(System.currentTimeMillis() + exp)) // 토큰 유효시간
-                .claim("user", member) // 토큰에 담을 데이터
+                .claim("role", member.getId()) // 토큰에 담을 데이터
                 .signWith(SignatureAlgorithm.HS256, secretKey.getBytes()) // secretKey를 사용하여 해싱 암호화 알고리즘 처리
                 .compact(); // 직렬화, 문자열로 변경
     }
 
-    //토큰에 담긴 정보 가져옴
-    public Map<String, Object> getInfo(String token) throws Exception {
-        Jws<Claims> claims = null;
-        try {
-            claims = Jwts.parser().setSigningKey(secretKey.getBytes()).parseClaimsJws(token); // secretKey를 사용하여 복호화
-        } catch(Exception e) {
-            throw new Exception();
-        }
-
-        return claims.getBody();
+    // 토큰에서 회원 정보 추출
+    public String getUserIdFromToken(String token) {
+        Claims claims = Jwts.parser()
+                .setSigningKey(secretKey.getBytes())
+                .parseClaimsJws(token)
+                .getBody();
+        return claims.get("role", String.class);
     }
 
-    // interceptor에서 토큰 유효성을 검증하기 위한 메서드
-    public void checkValid(String token) {
-        Jwts.parser().setSigningKey(secretKey.getBytes()).parseClaimsJws(token);
+    // 토큰 유효성 검사
+    public boolean validateToken(String token) {
+        try {
+            Jwts.parser().setSigningKey(secretKey.getBytes()).parseClaimsJws(token);
+            return true;
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return false;
     }
 }
-
