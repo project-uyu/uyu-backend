@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bf5b5bb-f435-4a01-a1e1-f4b491ca7f86" name="Changes" comment="[feat] 태그 서비스 + 레포지토리 테스트 완료" />
+    <list default="true" id="2bf5b5bb-f435-4a01-a1e1-f4b491ca7f86" name="Changes" comment="[feat] 태그 서비스 + 레포지토리 테스트 완료">
+      <change afterPath="$PROJECT_DIR$/src/main/java/uyu/server/member/web/dto/MemberSignUpRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/member/web/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/member/web/MemberController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -297,7 +300,7 @@
       <workItem from="1676523708592" duration="2631000" />
       <workItem from="1677230031917" duration="9955000" />
       <workItem from="1677252233874" duration="186000" />
-      <workItem from="1678365414215" duration="4791000" />
+      <workItem from="1678365414215" duration="5254000" />
     </task>
     <task id="LOCAL-00001" summary="[feat] 폴더 구조 생성">
       <created>1675400009045</created>
