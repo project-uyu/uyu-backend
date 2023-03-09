@@ -4,7 +4,7 @@ import uyu.server.link.web.dto.LinkRequestDto;
 import uyu.server.link.web.dto.LinkResponseDto;
 
 import java.util.List;
-import uyu.server.link.web.dto.LinkSearchRequestDto;
+import uyu.server.link.web.dto.LinkSearchResponseDto;
 
 public interface LinkService {
     LinkResponseDto getLinkDetail(Long linkId);
@@ -12,5 +12,5 @@ public interface LinkService {
     Long deleteLink(Long linkId);
     Long createLink(Long folderId, LinkRequestDto dto);
     List<LinkResponseDto> getLinkList(Long folderId);
-    List<LinkSearchRequestDto> searchLink(String word);
+    List<LinkSearchResponseDto> searchLink(String word);
 }

@@ -9,7 +9,7 @@ import uyu.server.folder.service.FolderService;
 import uyu.server.folder.web.dto.request.CreateFolderRequestDTO;
 import uyu.server.folder.web.dto.FolderDTO;
 import uyu.server.folder.web.dto.request.ModifyFolderRequestDTO;
-import uyu.server.folder.web.dto.request.SearchFolderRequestDTO;
+import uyu.server.folder.web.dto.response.SearchFolderResponseDTO;
 import uyu.server.link.service.LinkService;
 import uyu.server.link.web.dto.LinkRequestDto;
 import uyu.server.link.web.dto.LinkResponseDto;
@@ -57,8 +57,8 @@ public class FolderApiController {
     }
 
     @GetMapping("search")
-    public ResponseEntity<List<SearchFolderRequestDTO>> searchFolder(@RequestParam(value = "word") String word) {
-        List<SearchFolderRequestDTO> searchFolder = folderService.searchFolder(word);
+    public ResponseEntity<List<SearchFolderResponseDTO>> searchFolder(@RequestParam(value = "word") String word) {
+        List<SearchFolderResponseDTO> searchFolder = folderService.searchFolder(word);
         return ResponseEntity.status(HttpStatus.OK).body(searchFolder);
     }
 

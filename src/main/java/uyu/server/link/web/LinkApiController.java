@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import uyu.server.link.service.LinkService;
 import uyu.server.link.web.dto.LinkRequestDto;
 import uyu.server.link.web.dto.LinkResponseDto;
-import uyu.server.link.web.dto.LinkSearchRequestDto;
+import uyu.server.link.web.dto.LinkSearchResponseDto;
 
 @RestController
 @RequestMapping("/links/")
@@ -36,8 +36,8 @@ public class LinkApiController {
     }
 
     @GetMapping("search")
-    public ResponseEntity<List<LinkSearchRequestDto>> searchLink(@RequestParam(value = "word") String word) {
-        List<LinkSearchRequestDto> searchLink = linkService.searchLink(word);
+    public ResponseEntity<List<LinkSearchResponseDto>> searchLink(@RequestParam(value = "word") String word) {
+        List<LinkSearchResponseDto> searchLink = linkService.searchLink(word);
         return ResponseEntity.status(HttpStatus.OK).body(searchLink);
     }
 }

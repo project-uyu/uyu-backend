@@ -9,7 +9,7 @@ import uyu.server.folder.service.FolderService;
 import uyu.server.folder.web.dto.FolderDTO;
 
 import java.util.List;
-import uyu.server.folder.web.dto.request.SearchFolderRequestDTO;
+import uyu.server.folder.web.dto.response.SearchFolderResponseDTO;
 
 @Service
 @RequiredArgsConstructor
@@ -59,7 +59,7 @@ public class FolderServiceImpl implements FolderService {
     }
 
     @Override
-    public List<SearchFolderRequestDTO> searchFolder(String word) {
+    public List<SearchFolderResponseDTO> searchFolder(String word) {
         return null;
     }
 }

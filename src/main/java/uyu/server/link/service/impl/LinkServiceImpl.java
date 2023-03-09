@@ -10,7 +10,7 @@ import uyu.server.link.data.repository.LinkRepository;
 import uyu.server.link.service.LinkService;
 import uyu.server.link.web.dto.LinkRequestDto;
 import uyu.server.link.web.dto.LinkResponseDto;
-import uyu.server.link.web.dto.LinkSearchRequestDto;
+import uyu.server.link.web.dto.LinkSearchResponseDto;
 import uyu.server.linkTag.data.entity.LinkTag;
 import uyu.server.linkTag.data.repository.LinkTagRepository;
 import uyu.server.tag.web.dto.TagListResponseDto;
@@ -121,7 +121,22 @@ public class LinkServiceImpl implements LinkService {
     }
 
     @Override
-    public List<LinkSearchRequestDto> searchLink(String word) {
-        return null;
+    public List<LinkSearchResponseDto> searchLink(String word) {
+        List<LinkSearchResponseDto> dtoList = new ArrayList<>();
+
+        // title에 해당 검색어가 들어가야 함
+        List<Link> searchLink = linkRepository.findByTitleContaining(word)
+            .orElseThrow(() -> new IllegalArgumentException("해당 검색어를 가진 link가 없습니다." + word));
+
+        searchLink.forEach(link -> {
+            List<TagListResponseDto> tagListResponseDtos = new ArrayList<>();
+
+            linkTagRepository.findTagsByLinkIdUsingFetchJoinTag(link.getId())
+                .forEach(tag -> tagListResponseDtos.add(new TagListResponseDto(tag)));
+
+            dtoList.add(new LinkSearchResponseDto(link, tagListResponseDtos));
+        });
+
+        return dtoList;
     }
 }

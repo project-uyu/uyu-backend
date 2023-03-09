@@ -1,10 +1,9 @@
 package uyu.server.folder.service;
 
-import jakarta.validation.constraints.NotNull;
 import uyu.server.folder.web.dto.FolderDTO;
 
 import java.util.List;
-import uyu.server.folder.web.dto.request.SearchFolderRequestDTO;
+import uyu.server.folder.web.dto.response.SearchFolderResponseDTO;
 
 public interface FolderService {
     Long createNewFolder(String title, Long parentFolderId);
@@ -16,6 +15,6 @@ public interface FolderService {
     Long modifyFolder(Long folderId, String title, Long parentFolderId);
 
     List<FolderDTO> getFolderList(Long userId);
-    List<SearchFolderRequestDTO> searchFolder(String word);
+    List<SearchFolderResponseDTO> searchFolder(String word);
 
 }

@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bf5b5bb-f435-4a01-a1e1-f4b491ca7f86" name="Changes" comment="[feat] folder search controller 개발 완료">
+    <list default="true" id="2bf5b5bb-f435-4a01-a1e1-f4b491ca7f86" name="Changes" comment="[feat] Link search controller 개발 완료">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/folder/service/FolderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/folder/service/FolderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/folder/service/impl/FolderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/folder/service/impl/FolderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/FolderApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/FolderApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/dto/request/SearchFolderRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/folder/web/dto/response/SearchFolderResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/link/data/repository/LinkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/link/data/repository/LinkRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/link/service/LinkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/link/service/LinkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/link/service/impl/LinkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/link/service/impl/LinkServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/link/web/LinkApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/link/web/LinkApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/link/web/dto/LinkSearchRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/link/web/dto/LinkSearchResponseDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,7 +297,7 @@
       <workItem from="1676193679841" duration="7649000" />
       <workItem from="1676514137587" duration="1043000" />
       <workItem from="1676523708592" duration="2631000" />
-      <workItem from="1678063185667" duration="3525000" />
+      <workItem from="1678063185667" duration="4415000" />
     </task>
     <task id="LOCAL-00001" summary="[feat] 폴더 구조 생성">
       <created>1675400009045</created>
@@ -395,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678324027783</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="[feat] Link search controller 개발 완료">
+      <created>1678325626783</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1678325626783</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,6 +456,7 @@
     <MESSAGE value="[feat] 태그 서비스 + 레포지토리 테스트 완료" />
     <MESSAGE value="[feat] link 엔티티에 title 컬럼 추가" />
     <MESSAGE value="[feat] folder search controller 개발 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] folder search controller 개발 완료" />
+    <MESSAGE value="[feat] Link search controller 개발 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] Link search controller 개발 완료" />
   </component>
 </project>
