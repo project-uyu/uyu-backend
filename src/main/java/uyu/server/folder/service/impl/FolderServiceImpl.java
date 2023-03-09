@@ -1,5 +1,6 @@
 package uyu.server.folder.service.impl;
 
+import java.util.ArrayList;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -9,6 +10,7 @@ import uyu.server.folder.service.FolderService;
 import uyu.server.folder.web.dto.FolderDTO;
 
 import java.util.List;
+import uyu.server.folder.web.dto.response.SearchFolderDto;
 import uyu.server.folder.web.dto.response.SearchFolderResponseDTO;
 
 @Service
@@ -60,6 +62,23 @@ public class FolderServiceImpl implements FolderService {
 
     @Override
     public List<SearchFolderResponseDTO> searchFolder(String word) {
-        return null;
+        List<SearchFolderResponseDTO> dtoList = new ArrayList<>();
+
+        List<Folder> searchFolder = folderRepository.findByTitleContaining(word)
+            .orElseThrow(()-> new IllegalArgumentException("해당 제목을 가진 폴더가 없습니다." + word));
+
+        searchFolder.forEach(folder -> {
+            Long parentId = folder.getParentFolder().getId();
+            SearchFolderDto firstDto = new SearchFolderDto(folder, null);
+            while(parentId != null) {
+                Long finalParentId = parentId;
+                Folder parentFolder = folderRepository.findById(parentId)
+                    .orElseThrow(()-> new IllegalArgumentException("해당 id를 가진 부모 폴더가 없습니다" + finalParentId));
+                firstDto = new SearchFolderDto(parentFolder, firstDto);
+                parentId = parentFolder.getParentFolder().getId();
+            }
+            dtoList.add(new SearchFolderResponseDTO((long) folder.getLinks().size(), firstDto));
+        });
+        return dtoList;
     }
 }
