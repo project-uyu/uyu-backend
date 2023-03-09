@@ -1,7 +1,0 @@
-
-œ
-java:S1192"€Define a constant instead of duplicating this literal "í•´ë‹¹ ì•„ì´ë””ë¥¼ ê°€ì§„ ë§í¬ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤." 3 times.(‚Ğ¢Œúÿÿÿÿ
-m
-java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ñ¥¦Üüÿÿÿÿ
-_
-java:S1612"DReplace this lambda with method reference 'TagListResponseDto::new'.(ñ¥¦Üüÿÿÿÿ
