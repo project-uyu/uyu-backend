@@ -22,6 +22,11 @@ public class MemberController {
 
     @PostMapping("/signUp")
     public ResponseEntity<String> signUp(@RequestBody MemberSignUpRequestDTO memberSignUpRequest){
+
+        memberService.signUp(memberSignUpRequest.getEmail(),
+                memberSignUpRequest.getName(),
+                memberSignUpRequest.getPassword());
+
         return ResponseEntity.ok("회원가입이 완료되었습니다.");
     }
 

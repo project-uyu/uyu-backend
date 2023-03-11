@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bf5b5bb-f435-4a01-a1e1-f4b491ca7f86" name="Changes" comment="[feat] 태그 서비스 + 레포지토리 테스트 완료">
-      <change afterPath="$PROJECT_DIR$/src/main/java/uyu/server/member/web/dto/MemberSignUpRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/member/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/member/service/MemberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/member/service/impl/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/member/service/impl/MemberServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/member/web/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/member/web/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +140,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="uyu.server.member.web" />
       <recent name="uyu.server.link.service" />
       <recent name="uyu.server.folder.web" />
     </key>
@@ -300,7 +308,9 @@
       <workItem from="1676523708592" duration="2631000" />
       <workItem from="1677230031917" duration="9955000" />
       <workItem from="1677252233874" duration="186000" />
-      <workItem from="1678365414215" duration="5254000" />
+      <workItem from="1678365414215" duration="6657000" />
+      <workItem from="1678426662109" duration="599000" />
+      <workItem from="1678515061523" duration="3573000" />
     </task>
     <task id="LOCAL-00001" summary="[feat] 폴더 구조 생성">
       <created>1675400009045</created>
