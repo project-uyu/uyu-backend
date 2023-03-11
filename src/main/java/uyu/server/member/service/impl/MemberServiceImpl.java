@@ -27,6 +27,13 @@ public class MemberServiceImpl implements MemberService {
                         .build());
     }
 
+    @Override
+    public Member authenticate(String email, String password) throws Exception {
+        Member member = memberRepository.findByEmail(email).orElseThrow(()->new Exception("user 없음"));
+        if(!member.getPassword().equals(hashPassword(password))) throw new Exception("비번 틀림");
+        return member;
+    }
+
     private String hashPassword(String password) {
         try{
             //해당 알고리즘을 이용하는 해시 함수 객체 생성

@@ -13,7 +13,7 @@ public class AppConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(jwtInterceptor)
-                .addPathPatterns("/**") // JWT 인증이 필요한 API 경로를 지정합니다.
-                .excludePathPatterns(); // JWT 인증이 필요하지 않은 API 경로를 제외합니다.
+                .addPathPatterns("/api/user/admin/"); // JWT 인증이 필요한 API 경로를 지정합니다.
+//                .excludePathPatterns(); // JWT 인증이 필요하지 않은 API 경로를 제외합니다.
     }
 }

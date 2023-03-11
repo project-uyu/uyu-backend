@@ -1,12 +1,19 @@
 package uyu.server.member.web;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import uyu.server.member.data.entity.Member;
 import uyu.server.member.service.MemberService;
+import uyu.server.member.web.dto.MemberLoginRequestDTO;
 import uyu.server.member.web.dto.MemberSignUpRequestDTO;
+import uyu.server.util.JwtUtil;
 import uyu.server.util.Permission;
 import uyu.server.util.PermissionRole;
+
+import javax.naming.AuthenticationException;
 
 @RestController
 @RequestMapping("/api/users")
@@ -14,6 +21,8 @@ import uyu.server.util.PermissionRole;
 public class MemberController {
 
     private final MemberService memberService;
+    private final JwtUtil jwtUtil;
+
     @GetMapping("/admin")
     @Permission(role = PermissionRole.ADMIN)
     public String adminPage(){
@@ -30,4 +39,17 @@ public class MemberController {
         return ResponseEntity.ok("회원가입이 완료되었습니다.");
     }
 
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody MemberLoginRequestDTO memberLoginRequest) throws Exception {
+        try {
+            Member member = memberService.authenticate(memberLoginRequest.getEmail(), memberLoginRequest.getPassword());
+            String token = jwtUtil.createToken(member);
+            HttpHeaders responseHeaders = new HttpHeaders();
+            responseHeaders.set("Authorization","Bearer " + token);
+            return new ResponseEntity<>(responseHeaders, HttpStatus.OK);
+        }catch (AuthenticationException e){
+            return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+        }
+
+    }
 }

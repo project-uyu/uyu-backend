@@ -14,7 +14,6 @@ import org.springframework.web.servlet.HandlerInterceptor;
 @AllArgsConstructor
 public class JwtInterceptor implements HandlerInterceptor {
 
-
     private static final String AUTHORIZATION_HEADER = "Authorization";
     private static final String TOKEN_PREFIX = "Bearer ";
 

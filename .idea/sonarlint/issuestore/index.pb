@@ -1,6 +1,4 @@
 
-7
-gradlew,5/b/5bbfa66edb4db3c7c33c5181f43510990d3307f9
 _
 /src/main/java/uyu/server/ServerApplication.java,3/d/3d37bbdec635fc6948e9dc42b88d0c16d739485c
 i
@@ -13,8 +11,6 @@ f
 6src/main/java/uyu/server/tag/web/TagApiController.java,e/1/e13e313b54d8b2acc694763b818b002b60c58518
 ;
 gradlew.bat,2/a/2a45a911a8f1836b0b6c5b758962572012d8f8c3
-<
-build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
 {
 Ksrc/main/java/uyu/server/folder/web/dto/request/ModifyFolderRequestDTO.java,7/e/7e9333c47303cfc4f5413c7a925fed05d7a2c5c6
 {
@@ -29,10 +25,6 @@ l
 -src/main/java/uyu/server/util/Permission.java,b/a/ba68d00eb4abdb1c2b5e090621e63a370bf798e3
 a
 1src/main/java/uyu/server/util/PermissionRole.java,b/e/beb40756aba1a0cc04dfcb6a5dff364dc7f6d48e
-\
-,src/main/java/uyu/server/util/AppConfig.java,4/b/4bea539930480d400e18578c88a8b6ba7774cd75
-a
-1src/main/java/uyu/server/util/JwtInterceptor.java,c/f/cfa62d71273413c7bbad3e5f88db08f8fb297c66
 f
 6src/main/java/uyu/server/link/service/LinkService.java,b/7/b733f10723941b92803318474021928ab5a360c2
 q
