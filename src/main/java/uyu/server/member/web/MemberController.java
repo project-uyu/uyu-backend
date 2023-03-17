@@ -22,13 +22,12 @@ public class MemberController {
     private final JwtUtil jwtUtil;
 
     @GetMapping("/admin")
-    public String adminPage(){
+    public String adminPage() {
         return "admin";
     }
 
     @PostMapping("/signUp")
-    public ResponseEntity<String> signUp(@RequestBody MemberSignUpRequestDTO memberSignUpRequest){
-
+    public ResponseEntity<String> signUp(@RequestBody MemberSignUpRequestDTO memberSignUpRequest) {
         memberService.signUp(memberSignUpRequest.getEmail(),
                 memberSignUpRequest.getName(),
                 memberSignUpRequest.getPassword());
@@ -42,11 +41,10 @@ public class MemberController {
             Member member = memberService.authenticate(memberLoginRequest.getEmail(), memberLoginRequest.getPassword());
             String token = jwtUtil.createToken(member);
             HttpHeaders responseHeaders = new HttpHeaders();
-            responseHeaders.set("Authorization","Bearer " + token);
+            responseHeaders.set("Authorization", "Bearer " + token);
             return new ResponseEntity<>(responseHeaders, HttpStatus.OK);
-        }catch (AuthenticationException e){
+        } catch (AuthenticationException e) {
             return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
         }
-
     }
 }
