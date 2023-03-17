@@ -4,9 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="2bf5b5bb-f435-4a01-a1e1-f4b491ca7f86" name="Changes" comment="[feat] 태그 서비스 + 레포지토리 테스트 완료">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uyu/server/member/web/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uyu/server/member/web/MemberController.java" afterDir="false" />
+=======
+    <list default="true" id="2bf5b5bb-f435-4a01-a1e1-f4b491ca7f86" name="Changes" comment="[feat] link 엔티티에 title 컬럼 추가">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/data/entity/Link$LinkBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/data/entity/Link$LinkBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/data/entity/Link.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/data/entity/Link.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/service/impl/LinkServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/service/impl/LinkServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/web/dto/LinkRequestDto$LinkBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/web/dto/LinkRequestDto$LinkBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/web/dto/LinkRequestDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/web/dto/LinkRequestDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/web/dto/LinkResponseDto$LinkResponseDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/web/dto/LinkResponseDto$LinkResponseDtoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/web/dto/LinkResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/uyu/server/link/web/dto/LinkResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/uyu/server/tag/repository/entity/Tag$TagBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/uyu/server/tag/repository/entity/Tag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/uyu/server/link/service/LinkServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/uyu/server/link/service/LinkServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/uyu/server/link/web/LinkControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/uyu/server/link/web/LinkControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/uyu/server/tag/repository/TagRepositoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/uyu.server.link.service.LinkServiceTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/uyu.server.link.service.LinkServiceTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/uyu.server.tag.service.TagServiceTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/uyu.server.link.service.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/uyu.server.link.service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/uyu.server.tag.service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-uyu.server.link.service.LinkServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-uyu.server.link.service.LinkServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-uyu.server.tag.service.TagServiceTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uyu/server/link/service/LinkServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uyu/server/link/service/LinkServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uyu/server/link/web/LinkControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uyu/server/link/web/LinkControllerTest.java" afterDir="false" />
+>>>>>>> develop
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +87,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feat/createTagAPI" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -149,7 +191,53 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ServerApplication">
+  <component name="RunManager" selected="Gradle.LinkServiceTest">
+    <configuration name="LinkControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;uyu.server.link.web.LinkControllerTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="LinkServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;uyu.server.link.service.LinkServiceTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="TagRepositoryTest.saveAndFind" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -219,52 +307,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TagServiceTest.deleteTag" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;uyu.server.tag.service.TagServiceTest.deleteTag&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="TagServiceTest.getTagList" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;uyu.server.tag.service.TagServiceTest.getTagList&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="ServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="ACTIVE_PROFILES" value="local" />
       <module name="server.main" />
@@ -281,11 +323,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.LinkServiceTest" />
+        <item itemvalue="Gradle.LinkControllerTest" />
         <item itemvalue="Gradle.TagServiceTest" />
         <item itemvalue="Gradle.TagServiceTest.createLink" />
         <item itemvalue="Gradle.TagRepositoryTest.saveAndFind" />
-        <item itemvalue="Gradle.TagServiceTest.getTagList" />
-        <item itemvalue="Gradle.TagServiceTest.deleteTag" />
       </list>
     </recent_temporary>
   </component>
@@ -403,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676525470865</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="[feat] link 엔티티에 title 컬럼 추가">
+      <created>1677559842569</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1677559842569</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,6 +500,7 @@
     <MESSAGE value="[feat] 링크 생성 + 링크 리스트 반환 API 완료" />
     <MESSAGE value="[feat] 태그 컨트롤러 테스트 완료" />
     <MESSAGE value="[feat] 태그 서비스 + 레포지토리 테스트 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] 태그 서비스 + 레포지토리 테스트 완료" />
+    <MESSAGE value="[feat] link 엔티티에 title 컬럼 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] link 엔티티에 title 컬럼 추가" />
   </component>
 </project>

@@ -30,6 +30,7 @@ public class LinkServiceImpl implements LinkService {
         List<TagListResponseDto> tagLists = linkTagRepository.findTagsByLinkIdUsingFetchJoinTag(linkId)
                 .stream().map(tag -> new TagListResponseDto(tag)).collect(Collectors.toList());
         return LinkResponseDto.builder()
+                .title(link.getTitle())
                 .linkId(linkId)
                 .content(link.getContent())
                 .createdDate(link.getCreatedDate())
@@ -89,6 +90,7 @@ public class LinkServiceImpl implements LinkService {
         Folder folder = folderRepository.findById(folderId).orElseThrow(()-> new IllegalArgumentException("해당 아이디를 가진 폴더가 없습니다." + folderId));
         //링크 생성
         Link link = linkRepository.save(Link.builder()
+                        .title(linkDto.getTitle())
                         .url(linkDto.getUrl())
                         .content(linkDto.getContent())
                         .folder(folder)
