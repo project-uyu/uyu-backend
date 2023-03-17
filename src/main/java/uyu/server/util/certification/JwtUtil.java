@@ -1,4 +1,4 @@
-package uyu.server.util;
+package uyu.server.util.certification;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

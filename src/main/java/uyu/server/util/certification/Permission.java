@@ -1,4 +1,4 @@
-package uyu.server.util;
+package uyu.server.util.certification;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

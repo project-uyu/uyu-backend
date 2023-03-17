@@ -9,9 +9,7 @@ import uyu.server.member.data.entity.Member;
 import uyu.server.member.service.MemberService;
 import uyu.server.member.web.dto.MemberLoginRequestDTO;
 import uyu.server.member.web.dto.MemberSignUpRequestDTO;
-import uyu.server.util.JwtUtil;
-import uyu.server.util.Permission;
-import uyu.server.util.PermissionRole;
+import uyu.server.util.certification.JwtUtil;
 
 import javax.naming.AuthenticationException;
 
@@ -24,7 +22,6 @@ public class MemberController {
     private final JwtUtil jwtUtil;
 
     @GetMapping("/admin")
-    @Permission(role = PermissionRole.ADMIN)
     public String adminPage(){
         return "admin";
     }

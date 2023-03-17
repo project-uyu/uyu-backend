@@ -21,10 +21,6 @@ c
 3src/main/java/uyu/server/link/data/entity/Link.java,1/3/138db465e9e7a6f7666473bd3e0b4f582fbc49be
 l
 <src/main/java/uyu/server/folder/web/FolderApiController.java,2/5/2556c514bce17e97262c5340a63ab109a75562d9
-]
--src/main/java/uyu/server/util/Permission.java,b/a/ba68d00eb4abdb1c2b5e090621e63a370bf798e3
-a
-1src/main/java/uyu/server/util/PermissionRole.java,b/e/beb40756aba1a0cc04dfcb6a5dff364dc7f6d48e
 f
 6src/main/java/uyu/server/link/service/LinkService.java,b/7/b733f10723941b92803318474021928ab5a360c2
 q
