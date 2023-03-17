@@ -1,7 +1,6 @@
 package uyu.server.member.service.impl;
 
 import lombok.RequiredArgsConstructor;
-import org.apache.catalina.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import uyu.server.member.data.entity.Member;
@@ -32,6 +31,12 @@ public class MemberServiceImpl implements MemberService {
         Member member = memberRepository.findByEmail(email).orElseThrow(()->new Exception("user 없음"));
         if(!member.getPassword().equals(hashPassword(password))) throw new Exception("비번 틀림");
         return member;
+    }
+
+    @Override
+    public Member findMemberByEmail(String email) throws Exception {
+        return memberRepository.findByEmail(email).orElseThrow(()->new Exception("user 없음"));
+
     }
 
     private String hashPassword(String password) {

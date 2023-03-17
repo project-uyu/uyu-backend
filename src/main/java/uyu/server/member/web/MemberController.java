@@ -1,6 +1,7 @@
 package uyu.server.member.web;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,7 @@ import uyu.server.util.certification.JwtUtil;
 
 import javax.naming.AuthenticationException;
 
+@Slf4j
 @RestController
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
@@ -22,8 +24,8 @@ public class MemberController {
     private final JwtUtil jwtUtil;
 
     @GetMapping("/admin")
-    public String adminPage() {
-        return "admin";
+    public ResponseEntity<String> adminPage() {
+        return ResponseEntity.ok("admin page");
     }
 
     @PostMapping("/signUp")

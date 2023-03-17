@@ -23,6 +23,7 @@ public class JwtUtil {
                 .setSubject("userToken") // 토큰 제목
                 .setExpiration(new Date(System.currentTimeMillis() + exp)) // 토큰 유효시간
                 .claim("role", member.getId()) // 토큰에 담을 데이터
+                .claim("email",member.getEmail())
                 .signWith(SignatureAlgorithm.HS256, secretKey.getBytes()) // secretKey를 사용하여 해싱 암호화 알고리즘 처리
                 .compact(); // 직렬화, 문자열로 변경
     }
@@ -37,13 +38,8 @@ public class JwtUtil {
     }
 
     // 토큰 유효성 검사
-    public boolean validateToken(String token) {
-        try {
-            Jwts.parser().setSigningKey(secretKey.getBytes()).parseClaimsJws(token);
-            return true;
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        return false;
+    public Claims validateToken(String token) {
+        return Jwts.parser().setSigningKey(secretKey.getBytes()).parseClaimsJws(token).getBody();
     }
+
 }
