@@ -2,7 +2,6 @@ package uyu.server.member.web;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,16 +12,23 @@ import uyu.server.member.web.dto.MemberSignUpRequestDTO;
 import uyu.server.util.certification.JwtUtil;
 
 import javax.naming.AuthenticationException;
+import java.util.HashMap;
+import java.util.Map;
 
 @Slf4j
 @RestController
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
 public class MemberController {
+    private static final String AUTHORIZATION_HEADER = "Authorization";
+    private static final String AUTHORIZATION_TOKEN_PREFIX = "Bearer ";
+
+    private static final String REFRESH_TOKEN_HEADER = "Refresh-Token";
+
+    private static final String REFRESH_TOKEN_PREFIX = "Refresh ";
 
     private final MemberService memberService;
     private final JwtUtil jwtUtil;
-
     @GetMapping("/admin")
     public ResponseEntity<String> adminPage() {
         return ResponseEntity.ok("admin page");
@@ -38,13 +44,19 @@ public class MemberController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody MemberLoginRequestDTO memberLoginRequest) throws Exception {
+    public ResponseEntity<Map<String,String>> login(@RequestBody MemberLoginRequestDTO memberLoginRequest) throws Exception {
         try {
             Member member = memberService.authenticate(memberLoginRequest.getEmail(), memberLoginRequest.getPassword());
-            String token = jwtUtil.createToken(member);
-            HttpHeaders responseHeaders = new HttpHeaders();
-            responseHeaders.set("Authorization", "Bearer " + token);
-            return new ResponseEntity<>(responseHeaders, HttpStatus.OK);
+            String jwtToken = jwtUtil.createAccessToken(member);
+            String refreshToken = jwtUtil.createRefreshToken(member);
+            jwtUtil.saveRefreshToken(refreshToken, member.getEmail());
+            Map<String,String> response = new HashMap<>();
+            response.put("accessToken", jwtToken);
+            response.put("refreshToken", refreshToken);
+            return ResponseEntity.ok()
+                    .header(AUTHORIZATION_HEADER, AUTHORIZATION_TOKEN_PREFIX+ jwtToken)
+                    .header(REFRESH_TOKEN_HEADER, REFRESH_TOKEN_PREFIX + refreshToken)
+                    .body(response);
         } catch (AuthenticationException e) {
             return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
         }
