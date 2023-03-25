@@ -29,6 +29,7 @@ public class MemberController {
 
     private final MemberService memberService;
     private final JwtUtil jwtUtil;
+
     @GetMapping("/admin")
     public ResponseEntity<String> adminPage() {
         return ResponseEntity.ok("admin page");
@@ -44,21 +45,29 @@ public class MemberController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<Map<String,String>> login(@RequestBody MemberLoginRequestDTO memberLoginRequest) throws Exception {
+    public ResponseEntity<Map<String, String>> login(@RequestBody MemberLoginRequestDTO memberLoginRequest) throws Exception {
         try {
             Member member = memberService.authenticate(memberLoginRequest.getEmail(), memberLoginRequest.getPassword());
             String jwtToken = jwtUtil.createAccessToken(member);
             String refreshToken = jwtUtil.createRefreshToken(member);
             jwtUtil.saveRefreshToken(refreshToken, member.getEmail());
-            Map<String,String> response = new HashMap<>();
+            Map<String, String> response = new HashMap<>();
             response.put("accessToken", jwtToken);
             response.put("refreshToken", refreshToken);
             return ResponseEntity.ok()
-                    .header(AUTHORIZATION_HEADER, AUTHORIZATION_TOKEN_PREFIX+ jwtToken)
+                    .header(AUTHORIZATION_HEADER, AUTHORIZATION_TOKEN_PREFIX + jwtToken)
                     .header(REFRESH_TOKEN_HEADER, REFRESH_TOKEN_PREFIX + refreshToken)
                     .body(response);
         } catch (AuthenticationException e) {
             return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
         }
     }
+
+    @PostMapping("/logout")
+    public ResponseEntity<String> logout(@RequestHeader(REFRESH_TOKEN_HEADER) String refreshToken) {
+        refreshToken = refreshToken.substring(REFRESH_TOKEN_PREFIX.length());
+        jwtUtil.deleteRefreshToken(refreshToken);
+        return ResponseEntity.ok("Logout successfully.");
+    }
+
 }
