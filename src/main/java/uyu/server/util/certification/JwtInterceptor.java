@@ -18,7 +18,9 @@ import uyu.server.member.service.MemberService;
 public class JwtInterceptor implements HandlerInterceptor {
 
     private static final String AUTHORIZATION_HEADER = "Authorization";
-    private static final String TOKEN_PREFIX = "Bearer ";
+    private static final String AUTHORIZATION_TOKEN_PREFIX = "Bearer ";
+    private static final String REFRESH_TOKEN_HEADER = "Refresh-Token";
+    private static final String REFRESH_TOKEN_PREFIX = "Refresh ";
 
     private final JwtUtil jwtUtil;
     private final MemberService memberService;
@@ -26,31 +28,47 @@ public class JwtInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request,
                              HttpServletResponse response,
-                             Object handler) throws Exception {
+                             Object handler){
 
         if (handler instanceof HandlerMethod) {
+            String accessToken = request.getHeader(AUTHORIZATION_HEADER);
+            String refreshToken = request.getHeader(REFRESH_TOKEN_HEADER);
 
-            String token = request.getHeader(AUTHORIZATION_HEADER);
-
-            if (token == null || !token.startsWith(TOKEN_PREFIX)) {
+            if (accessToken == null || !accessToken.startsWith(AUTHORIZATION_TOKEN_PREFIX)) {
                 response.setStatus(HttpStatus.UNAUTHORIZED.value());
                 return false;
             }
 
-            token = token.substring(TOKEN_PREFIX.length());
+            accessToken = accessToken.substring(AUTHORIZATION_TOKEN_PREFIX.length());
 
             try {
-                Claims claims = jwtUtil.validateToken(token);
-                log.info("validateToken");
+                Claims claims = jwtUtil.validateToken(accessToken);
+                log.info("Access token validation success");
                 Member member =  memberService.findMemberByEmail((String) claims.get("email"));
-                log.info("로그인 시도 email : " + (String) claims.get("email"));
+                log.info("Trying to log in email : " + (String) claims.get("email"));
 
             } catch (Exception ex) {
-                response.setStatus(HttpStatus.UNAUTHORIZED.value());
-                return false;
+
+                if(refreshToken == null || !refreshToken.startsWith(REFRESH_TOKEN_PREFIX)) {
+                    response.setStatus(HttpStatus.UNAUTHORIZED.value());
+                    return false;
+                }
+                refreshToken = refreshToken.substring(REFRESH_TOKEN_PREFIX.length());
+
+                try {
+                    Claims claims = jwtUtil.validateRefreshToken(refreshToken);
+                    log.info("Refresh token validation success");
+                    Member member =  memberService.findMemberByEmail((String) claims.get("email"));
+                    log.info("Trying to log in email : " + (String) claims.get("email"));
+                    String newAccessToken = jwtUtil.createAccessToken(member);
+                    response.setHeader(AUTHORIZATION_HEADER, AUTHORIZATION_TOKEN_PREFIX + newAccessToken);
+
+                }catch (Exception e) {
+                    response.setStatus(HttpStatus.UNAUTHORIZED.value());
+                    return false;
+                }
             }
         }
-
 
         return true;
     }
