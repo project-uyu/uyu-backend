@@ -28,14 +28,14 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public Member authenticate(String email, String password) throws Exception {
-        Member member = memberRepository.findByEmail(email).orElseThrow(()->new Exception("user 없음"));
-        if(!member.getPassword().equals(hashPassword(password))) throw new Exception("비번 틀림");
+        Member member = memberRepository.findByEmail(email).orElseThrow(()->new Exception("User not found"));
+        if(!member.getPassword().equals(hashPassword(password))) throw new Exception("Incorrect password");
         return member;
     }
 
     @Override
     public Member findMemberByEmail(String email) throws Exception {
-        return memberRepository.findByEmail(email).orElseThrow(()->new Exception("user 없음"));
+        return memberRepository.findByEmail(email).orElseThrow(()->new Exception("User not found"));
 
     }
 
