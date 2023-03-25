@@ -8,4 +8,6 @@ public interface MemberService {
     Member authenticate(String email, String password) throws Exception;
 
     Member findMemberByEmail(String email) throws Exception;
+
+    void delete(Long id);
 }

@@ -70,4 +70,9 @@ public class MemberController {
         return ResponseEntity.ok("Logout successfully.");
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteMember(@PathVariable Long id) {
+        memberService.delete(id);
+        return ResponseEntity.ok("Withdrawn from membership successfully.");
+    }
 }

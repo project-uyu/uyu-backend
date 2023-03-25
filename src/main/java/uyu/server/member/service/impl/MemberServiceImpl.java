@@ -39,6 +39,11 @@ public class MemberServiceImpl implements MemberService {
 
     }
 
+    @Override
+    public void delete(Long id) {
+        memberRepository.deleteById(id);
+    }
+
     private String hashPassword(String password) {
         try{
             //해당 알고리즘을 이용하는 해시 함수 객체 생성
