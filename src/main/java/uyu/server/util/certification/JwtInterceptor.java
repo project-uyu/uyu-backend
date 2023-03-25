@@ -41,7 +41,7 @@ public class JwtInterceptor implements HandlerInterceptor {
 
             try {
                 Claims claims = jwtUtil.validateToken(token);
-                log.info("validateToekn");
+                log.info("validateToken");
                 Member member =  memberService.findMemberByEmail((String) claims.get("email"));
                 log.info("로그인 시도 email : " + (String) claims.get("email"));
 

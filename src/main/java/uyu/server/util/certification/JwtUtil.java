@@ -28,15 +28,6 @@ public class JwtUtil {
                 .compact(); // 직렬화, 문자열로 변경
     }
 
-    // 토큰에서 회원 정보 추출
-    public String getUserIdFromToken(String token) {
-        Claims claims = Jwts.parser()
-                .setSigningKey(secretKey.getBytes())
-                .parseClaimsJws(token)
-                .getBody();
-        return claims.get("role", String.class);
-    }
-
     // 토큰 유효성 검사
     public Claims validateToken(String token) {
         return Jwts.parser().setSigningKey(secretKey.getBytes()).parseClaimsJws(token).getBody();
