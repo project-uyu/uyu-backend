@@ -19,7 +19,7 @@ import java.util.Map;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/members/")
 @RequiredArgsConstructor
 public class MemberController {
     private static final String AUTHORIZATION_HEADER = "Authorization";
@@ -37,7 +37,7 @@ public class MemberController {
         return ResponseEntity.ok("admin page");
     }
 
-    @GetMapping("/admin/member/{memberId}")
+    @GetMapping("/{memberId}/admin")
     @Permission(role = PermissionRole.SELF)
     public ResponseEntity<String> adminSelfPage(@PathVariable Long memberId) {
         return ResponseEntity.ok("personal admin page");
@@ -78,7 +78,8 @@ public class MemberController {
         return ResponseEntity.ok("Logout successfully.");
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("{id}")
+    @Permission(role = PermissionRole.SELF)
     public ResponseEntity<String> deleteMember(@PathVariable Long id) {
         memberService.delete(id);
         return ResponseEntity.ok("Withdrawn from membership successfully.");

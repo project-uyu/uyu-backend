@@ -91,7 +91,8 @@ public class JwtUtil {
 
     }
 
-    public void deleteRefreshToken(String email) {
+    public void deleteRefreshToken(String refreshToken) {
+        String email = validateRefreshToken(refreshToken).get("email").toString();
         redisTemplate.delete(email);
     }
 }
