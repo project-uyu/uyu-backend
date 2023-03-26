@@ -5,6 +5,7 @@ import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 import uyu.server.member.data.entity.Member;
@@ -13,6 +14,7 @@ import java.sql.Date;
 
 @Component
 @AllArgsConstructor
+@Slf4j
 public class JwtUtil {
 
     private final String SECRET_KEY = "secretKey";
@@ -33,8 +35,7 @@ public class JwtUtil {
                 .setHeaderParam("typ", "JWT") // 토큰 타입
                 .setSubject("userToken") // 토큰 제목
                 .setExpiration(new Date(System.currentTimeMillis() + ACCESS_TOKEN_EXP)) // 토큰 유효시간
-                .claim("role", member.getId()) // 토큰에 담을 데이터
-                .claim("email", member.getEmail())
+                .claim("email", member.getEmail()) //토큰에 담을 데이터
                 .signWith(SignatureAlgorithm.HS256, getSecretKey().getBytes()) // secretKey를 사용하여 해싱 암호화 알고리즘 처리
                 .compact(); // 직렬화, 문자열로 변경
     }
@@ -45,8 +46,7 @@ public class JwtUtil {
                 .setHeaderParam("typ", "JWT")
                 .setSubject("refreshToken")
                 .setExpiration(new Date(System.currentTimeMillis() + (REFRESH_TOKEN_EXP * 100)))
-                .claim("role", member.getId())
-                .claim("email", member.getEmail())
+                .claim("email", member.getEmail()) //토큰에 담을 데이터
                 .signWith(SignatureAlgorithm.HS256, getSecretKey().getBytes())
                 .compact();
     }
@@ -82,7 +82,11 @@ public class JwtUtil {
     }
 
     public void saveRefreshToken(String refreshToken, String email) {
-        redisTemplate.opsForValue().set(email, refreshToken, REFRESH_TOKEN_EXP);
+        log.info("saveRefreshToken"+refreshToken+" "+email);
+        redisTemplate.opsForValue().set(email, refreshToken, REFRESH_TOKEN_EXP, java.util.concurrent.TimeUnit.MILLISECONDS);
+        log.info("refreshToken saved");
+
+
     }
 
     public void deleteRefreshToken(String email) {
