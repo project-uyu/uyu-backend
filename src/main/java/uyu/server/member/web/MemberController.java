@@ -10,6 +10,8 @@ import uyu.server.member.service.MemberService;
 import uyu.server.member.web.dto.MemberLoginRequestDTO;
 import uyu.server.member.web.dto.MemberSignUpRequestDTO;
 import uyu.server.util.certification.JwtUtil;
+import uyu.server.util.certification.Permission;
+import uyu.server.util.certification.PermissionRole;
 
 import javax.naming.AuthenticationException;
 import java.util.HashMap;
@@ -33,6 +35,12 @@ public class MemberController {
     @GetMapping("/admin")
     public ResponseEntity<String> adminPage() {
         return ResponseEntity.ok("admin page");
+    }
+
+    @GetMapping("/admin/member/{memberId}")
+    @Permission(role = PermissionRole.SELF)
+    public ResponseEntity<String> adminSelfPage(@PathVariable Long memberId) {
+        return ResponseEntity.ok("personal admin page");
     }
 
     @PostMapping("/signUp")

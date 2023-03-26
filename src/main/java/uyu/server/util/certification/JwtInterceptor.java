@@ -12,6 +12,8 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import uyu.server.member.data.entity.Member;
 import uyu.server.member.service.MemberService;
 
+import java.util.Objects;
+
 @Slf4j
 @Component
 @AllArgsConstructor
@@ -68,7 +70,20 @@ public class JwtInterceptor implements HandlerInterceptor {
                     return false;
                 }
             }
+            String pathMemberId = extractPathUserId(request);
+            Permission permission = ((HandlerMethod) handler).getMethodAnnotation(Permission.class);
+            PermissionRole role = permission == null ? null : permission.role();
+            Claims claims = jwtUtil.validateToken(accessToken);
+            if (role == PermissionRole.SELF) {
+                log.info("Pemission Self validation start");
+                if(!pathMemberId.equals(claims.get("memberId").toString())){
+                    log.info("Pemission Self validation fail");
+                    response.setStatus(HttpStatus.UNAUTHORIZED.value());
+                    return false;
+                }
+            }
         }
+
 
         return true;
     }
@@ -83,6 +98,17 @@ public class JwtInterceptor implements HandlerInterceptor {
             }
         }
     }
+
+    private String extractPathUserId(HttpServletRequest request) {
+        String requestUrl = request.getRequestURI();
+        int userIdStartIndex = requestUrl.indexOf("/member/") + "/member/".length();
+        int userIdEndIndex = requestUrl.indexOf("/", userIdStartIndex);
+        if (userIdEndIndex == -1) {
+            userIdEndIndex = requestUrl.length();
+        }
+        return requestUrl.substring(userIdStartIndex, userIdEndIndex);
+    }
+
 }
 
 

@@ -36,6 +36,7 @@ public class JwtUtil {
                 .setSubject("userToken") // 토큰 제목
                 .setExpiration(new Date(System.currentTimeMillis() + ACCESS_TOKEN_EXP)) // 토큰 유효시간
                 .claim("email", member.getEmail()) //토큰에 담을 데이터
+                .claim("memberId", member.getId())
                 .signWith(SignatureAlgorithm.HS256, getSecretKey().getBytes()) // secretKey를 사용하여 해싱 암호화 알고리즘 처리
                 .compact(); // 직렬화, 문자열로 변경
     }
@@ -47,6 +48,7 @@ public class JwtUtil {
                 .setSubject("refreshToken")
                 .setExpiration(new Date(System.currentTimeMillis() + (REFRESH_TOKEN_EXP * 100)))
                 .claim("email", member.getEmail()) //토큰에 담을 데이터
+                .claim("memberId", member.getId())
                 .signWith(SignatureAlgorithm.HS256, getSecretKey().getBytes())
                 .compact();
     }
